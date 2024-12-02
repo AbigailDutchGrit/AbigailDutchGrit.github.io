@@ -1,16 +1,14 @@
 document.addEventListener('DOMContentLoaded', function () {
     // Elementen selecteren
-    const filterHeaders = document.querySelectorAll('.filter-header'); 
+    const filterHeaders = document.querySelectorAll('.filter-header');
     const filterOptionCards = document.querySelectorAll('.filter-option-card');
     const selectedFiltersContainer = document.getElementById('selected-filters');
-    const selectedFiltersContainer2 = document.getElementById('selected-filters-2'); 
+    const selectedFiltersContainer2 = document.getElementById('selected-filters-2');
     const productGrid = document.querySelector('.store-product-grid');
     const paginationElement = document.querySelector('.pagination');
-    
-    
 
     // Zoekbalk elementen
-    const searchInput = document.querySelector('.store-search-input'); 
+    const searchInput = document.querySelector('.store-search-input');
     const searchButton = document.querySelector('.search-icon');
 
     // Loading indicator
@@ -20,11 +18,15 @@ document.addEventListener('DOMContentLoaded', function () {
     document.body.appendChild(loadingIndicator);
 
     const itemsPerPage = 6;
-    let products = []; 
-    let currentPage = 1;
+    let products = [];
     let searchResults = []; // Zoekresultaten opslaan
     let totalPages = 1; // Totale aantal pagina's opslaan
     let selectedFilters = []; // Voor het bijhouden van geselecteerde filters
+
+    const urlParams = new URLSearchParams(window.location.search);
+    const pageFromURL = parseInt(urlParams.get('page')) || 1;
+    currentPage = pageFromURL;
+    loadPage(currentPage);  // Laad de juiste pagina
 
     loadFiltersFromLocalStorage();
 
@@ -37,75 +39,72 @@ document.addEventListener('DOMContentLoaded', function () {
     document.querySelector('.hamburger-menu').addEventListener('click', function () {
         document.querySelector('.store-sidebar').style.display = 'block';
     });
+    
 
-// Laad het JSON-bestand
-fetch('products.json')
-    .then(response => response.json())
-    .then(data => {
-        const productsArray = [];
+    // Laad het JSON-bestand
+    fetch('products.json')
+        .then(response => response.json())
+        .then(data => {
+            const productsArray = [];
 
-        for (const [group, productsList] of Object.entries(data.discipline_group)) {
-            productsList.forEach(product => {
-                productsArray.push({
-                    title: product.product,
-                    department: group.split(" - ")[0], 
-                    type: group.split(" - ")[1], 
-                    code: product.code,
-                    price: product.price,  // Hier gebruik je een vaste prijs, dit kun je aanpassen als nodig.
-                    image: product.image,
-                    short_description: product.short_description || 'Geen beschrijving beschikbaar' // Voeg short_description toe
+            for (const [group, productsList] of Object.entries(data.discipline_group)) {
+                productsList.forEach(product => {
+                    productsArray.push({
+                        title: product.product,
+                        department: group.split(" - ")[0],
+                        type: group.split(" - ")[1],
+                        code: product.code,
+                        price: product.price,  // Hier gebruik je een vaste prijs, dit kun je aanpassen als nodig.
+                        image: product.image,
+                        short_description: product.short_description || 'Geen beschrijving beschikbaar' // Voeg short_description toe
+                    });
                 });
-            });
-        }
-
-        products = productsArray; 
-        loadPage(currentPage); 
-
-        const options = {
-            keys: ['title', 'code'], 
-            threshold: 0.5, 
-        };
-
-        const fuse = new Fuse(products, options);
-
-        searchButton.addEventListener('click', () => {
-            const searchTerm = searchInput.value.trim().toLowerCase();
-            performSearch(searchTerm, fuse);
-        });
-
-        searchInput.addEventListener('input', (event) => {
-            const searchTerm = searchInput.value.trim().toLowerCase(); // Verkrijg de waarde van de zoekbalk
-            const suggestionText = document.getElementById('suggestion-text');
-            const notFoundContainer = document.getElementById('not-found-container');
-        
-            if (searchTerm === '') {
-                // Zoekbalk is leeg
-                searchResults = []; // Reset de zoekresultaten
-                suggestionText.style.display = 'none'; // Verberg suggestietekst
-                notFoundContainer.style.display = 'none'; // Verberg 'not found' tekst
-        
-                // Toon de originele productenlijst
-                productGrid.style.display = 'grid'; // Zorg dat het productgrid weer zichtbaar is
-                loadPage(currentPage); // Laad de huidige pagina opnieuw
-        
-                return; // Stop verdere uitvoering
             }
-        
-            performSearch(searchTerm, fuse); // Voer de zoekfunctie uit
-        });
-        
-        
 
-        searchInput.addEventListener('keydown', (event) => {
-            if (event.key === 'Enter') {
+            products = productsArray;
+            loadPage(currentPage);
+
+            const options = {
+                keys: ['title', 'code'],
+                threshold: 0.5,
+            };
+
+            const fuse = new Fuse(products, options);
+
+            searchButton.addEventListener('click', () => {
                 const searchTerm = searchInput.value.trim().toLowerCase();
                 performSearch(searchTerm, fuse);
-            }
-        });
-    })
-    .catch(error => console.error('Error loading products:', error));
+            });
 
+            searchInput.addEventListener('input', (event) => {
+                const searchTerm = searchInput.value.trim().toLowerCase(); // Verkrijg de waarde van de zoekbalk
+                const suggestionText = document.getElementById('suggestion-text');
+                const notFoundContainer = document.getElementById('not-found-container');
 
+                if (searchTerm === '') {
+                    // Zoekbalk is leeg
+                    searchResults = []; // Reset de zoekresultaten
+                    suggestionText.style.display = 'none'; // Verberg suggestietekst
+                    notFoundContainer.style.display = 'none'; // Verberg 'not found' tekst
+
+                    // Toon de originele productenlijst
+                    productGrid.style.display = 'grid'; // Zorg dat het productgrid weer zichtbaar is
+                    loadPage(currentPage); // Laad de huidige pagina opnieuw
+
+                    return; // Stop verdere uitvoering
+                }
+
+                performSearch(searchTerm, fuse); // Voer de zoekfunctie uit
+            });
+
+            searchInput.addEventListener('keydown', (event) => {
+                if (event.key === 'Enter') {
+                    const searchTerm = searchInput.value.trim().toLowerCase();
+                    performSearch(searchTerm, fuse);
+                }
+            });
+        })
+        .catch(error => console.error('Error loading products:', error));
 
     function createProductCard(product) {
         return `
@@ -129,7 +128,7 @@ fetch('products.json')
             </a>
             <div class="store-product-footer">
                 <p class="store-product-price">€${product.price}</p>
-                <button class="pink_button_shop" style="background-color: var(--dark_blue);" onclick="addToCart('${product.title}', '${product.code}', '${product.price}', '${product.image}', '${product.short_description }'); cartIcon(event)">
+                <button class="button_shop" onclick="addToCart('${product.title}', '${product.code}', '${product.price}', '${product.image}', '${product.short_description}'); cartIcon(event)">
                     <p class="cart" style="margin-left: 15px;">Add To Cart</p>
                     <span class="material-icons-outlined notranslate">add_shopping_cart</span>
                 </button>
@@ -137,16 +136,11 @@ fetch('products.json')
         </div>
         `;
     }
-    
 
-
-    
     // Functie om filters op te slaan in localStorage
     function saveFiltersToLocalStorage() {
         localStorage.setItem('selectedFilters', JSON.stringify(selectedFilters));
     }
-
-
 
     function loadFiltersFromLocalStorage() {
         const storedFilters = localStorage.getItem('selectedFilters');
@@ -157,12 +151,10 @@ fetch('products.json')
         }
     }
 
-
-
     // Functie om filter toe te voegen of te verwijderen en beide containers bij te werken
     function toggleFilter(filterText) {
         const filterIndex = selectedFilters.indexOf(filterText);
-    
+
         if (filterIndex > -1) {
             // Verwijder filter als het al is geselecteerd
             selectedFilters.splice(filterIndex, 1);
@@ -170,7 +162,7 @@ fetch('products.json')
             // Voeg filter toe als het nog niet is geselecteerd
             selectedFilters.push(filterText);
         }
-        
+
         updateSelectedFilters();
         saveFiltersToLocalStorage(); // Sla de filters op in localStorage
     }
@@ -179,7 +171,7 @@ fetch('products.json')
         loadFiltersFromLocalStorage(); // Herstel filters vanuit localStorage
     });
 
-     // Synchroniseer filtercontainer met de sidebar-opties
+    // Synchroniseer filtercontainer met de sidebar-opties
     function syncSidebarWithSelectedFilters() {
         filterOptionCards.forEach(option => {
             const filterText = option.textContent.trim();
@@ -190,10 +182,6 @@ fetch('products.json')
             }
         });
     }
-
-
-
-
 
     // Functie om de geselecteerde filters visueel te herstellen
     function restoreFilterSelection() {
@@ -208,54 +196,54 @@ fetch('products.json')
 
     function updateSelectedFilters() {
         selectedFiltersContainer.innerHTML = ''; // Maak de eerste container leeg
-    
+
         selectedFilters.forEach(filter => {
             const filterElement = document.createElement('div');
             filterElement.className = 'selected-filter';
             filterElement.textContent = filter;
-    
+
             // Voeg een close-icon toe om de filter te verwijderen
             const closeIcon = document.createElement('span');
             closeIcon.className = 'material-icons-outlined notranslate';
             closeIcon.textContent = 'close';
-    
+
             closeIcon.addEventListener('click', () => {
                 toggleFilter(filter);  // Synchroniseer direct bij verwijdering
                 syncSidebarWithSelectedFilters(); // Update sidebar
                 loadPage(currentPage); // Laad de pagina opnieuw zonder het verwijderde filter
             });
-    
+
             filterElement.appendChild(closeIcon);
             selectedFiltersContainer.appendChild(filterElement);
         });
-    
+
         // Voeg functionaliteit toe voor de tweede container
         // Leeg de tweede container
         selectedFiltersContainer2.innerHTML = '';
-    
+
         // Voeg de geselecteerde filters toe aan de tweede container, alleen als het scherm kleiner is dan of gelijk aan 630px
         if (window.innerWidth <= 630) {
             selectedFilters.forEach(filter => {
                 const filterElement = document.createElement('div');
                 filterElement.className = 'selected-filter';
                 filterElement.textContent = filter;
-    
+
                 // Voeg een close-icon toe om de filter te verwijderen
                 const closeIcon = document.createElement('span');
                 closeIcon.className = 'material-icons-outlined notranslate';
                 closeIcon.textContent = 'close';
-    
+
                 closeIcon.addEventListener('click', () => {
                     toggleFilter(filter);  // Synchroniseer direct bij verwijdering
                     syncSidebarWithSelectedFilters(); // Update sidebar
                     loadPage(currentPage); // Laad de pagina opnieuw zonder het verwijderde filter
                 });
-    
+
                 filterElement.appendChild(closeIcon);
                 selectedFiltersContainer2.appendChild(filterElement);
             });
         }
-    
+
         // Zorg ervoor dat de tweede container alleen zichtbaar is als het scherm kleiner is dan of gelijk aan 630px
         // en als er filters zijn toegevoegd aan selectedFiltersContainer2
         const hasFiltersInSecondContainer = selectedFiltersContainer2.innerHTML.trim() !== '';
@@ -264,10 +252,10 @@ fetch('products.json')
         } else {
             selectedFiltersContainer2.style.display = 'none'; // Verberg de tweede container
         }
-    
+
         syncSidebarWithSelectedFilters();
     }
-    
+
     // Event listeners voor klikken op sidebar-filters
     filterOptionCards.forEach(option => {
         option.addEventListener('click', function () {
@@ -282,10 +270,9 @@ fetch('products.json')
         loadFiltersFromLocalStorage(); // Herstel filters vanuit localStorage
     });
 
-
-// Aanroepen bij paginalaad
-loadPage(currentPage);
-syncSidebarWithSelectedFilters(); // Zorg dat sidebar en container gelijk zijn bij het laden
+    // Aanroepen bij paginalaad
+    loadPage(currentPage);
+    syncSidebarWithSelectedFilters(); // Zorg dat sidebar en container gelijk zijn bij het laden
     // Toggle filter header zichtbaarheid
     filterHeaders.forEach(header => {
         header.addEventListener('click', function () {
@@ -304,16 +291,21 @@ syncSidebarWithSelectedFilters(); // Zorg dat sidebar en container gelijk zijn b
         loadFiltersFromLocalStorage(); // Herstel filters vanuit localStorage
     });
 
+    function updateURLWithPageNumber(page) {
+        const url = new URL(window.location);
+        url.searchParams.set('page', page);
+        window.history.pushState({}, '', url);
+    }
 
     function setupPagination(filteredItemCount) {
-        paginationElement.innerHTML = '';  
-        totalPages = Math.ceil(filteredItemCount / itemsPerPage);  
-    
+        paginationElement.innerHTML = '';
+        totalPages = Math.ceil(filteredItemCount / itemsPerPage);
+
         const screenWidth = window.innerWidth;
         const maxVisiblePages = screenWidth < 630 ? 3 : 3;
-    
+
         let startPage, endPage;
-    
+
         if (totalPages <= maxVisiblePages) {
             startPage = 1;
             endPage = totalPages;
@@ -325,48 +317,48 @@ syncSidebarWithSelectedFilters(); // Zorg dat sidebar en container gelijk zijn b
                 startPage = totalPages - maxVisiblePages + 1;
                 endPage = totalPages;
             } else {
-                startPage = currentPage - 1; 
-                endPage = currentPage + 1; 
+                startPage = currentPage - 1;
+                endPage = currentPage + 1;
             }
         }
-    
+
         const prevButton = document.createElement('button');
-        prevButton.innerHTML = '<span class="material-symbols-outlined notranslate" id="arrow-back">arrow_back_ios</span>'; 
+        prevButton.innerHTML = '<span class="material-symbols-outlined notranslate" id="arrow-back">arrow_back_ios</span>';
         prevButton.classList.add('pagination-button');
         prevButton.onclick = () => {
             if (currentPage > 1) {
-                currentPage--; 
+                currentPage--;
                 loadPage(currentPage); // Laad de pagina na het klikken
             }
         };
         paginationElement.appendChild(prevButton);
-    
+
         for (let i = startPage; i <= endPage; i++) {
             const pageButton = document.createElement('button');
             pageButton.textContent = i;
             pageButton.classList.add('pagination-button');
-    
+
             if (i === currentPage) {
                 pageButton.classList.add('active-page');
             }
-    
+
             pageButton.onclick = () => {
                 currentPage = i;
                 loadPage(currentPage); // Laad de pagina na het klikken
             };
-    
+
             paginationElement.appendChild(pageButton);
         }
-    
+
         if (endPage < totalPages) {
             const ellipsisButton = document.createElement('button');
             ellipsisButton.textContent = '…';
             ellipsisButton.classList.add('pagination-button', 'ellipsis');
-            ellipsisButton.disabled = true; 
+            ellipsisButton.disabled = true;
             paginationElement.appendChild(ellipsisButton);
-            
+
             const lastPageButton = document.createElement('button');
-            lastPageButton.textContent = totalPages; 
+            lastPageButton.textContent = totalPages;
             lastPageButton.classList.add('pagination-button');
             lastPageButton.onclick = () => {
                 currentPage = totalPages;
@@ -374,18 +366,20 @@ syncSidebarWithSelectedFilters(); // Zorg dat sidebar en container gelijk zijn b
             };
             paginationElement.appendChild(lastPageButton);
         }
-    
+
         const nextButton = document.createElement('button');
-        nextButton.innerHTML = '<span class="material-symbols-outlined notranslate" id="arrow-forward">arrow_forward_ios</span>'; 
+        nextButton.innerHTML = '<span class="material-symbols-outlined notranslate" id="arrow-forward">arrow_forward_ios</span>';
         nextButton.classList.add('pagination-button');
         nextButton.onclick = () => {
             if (currentPage < totalPages) {
-                currentPage++; 
+                currentPage++;
                 loadPage(currentPage); // Laad de pagina na het klikken
             }
         };
         paginationElement.appendChild(nextButton);
     }
+
+    
     // Functie om producten te filteren op basis van de geselecteerde filters
     function getFilteredProducts() {
         const selectedDepartments = new Set();
@@ -451,34 +445,33 @@ syncSidebarWithSelectedFilters(); // Zorg dat sidebar en container gelijk zijn b
         });
     }
 
-
     function performSearch(searchTerm, fuse) {
-        loadingIndicator.style.display = 'block'; 
+        loadingIndicator.style.display = 'block';
         const trimmedSearchTerm = searchTerm.trim().toLowerCase();
-        const results = fuse.search(trimmedSearchTerm); 
+        const results = fuse.search(trimmedSearchTerm);
         searchResults = results.map(result => result.item);
-    
+
         const suggestionText = document.getElementById('suggestion-text');
         const notFoundContainer = document.getElementById('not-found-container');
-    
+
         // Verberg standaard de suggestionText en notFoundContainer
         suggestionText.style.display = 'none';
         notFoundContainer.style.display = 'none';
-    
+
         // Check of er een perfecte match is op basis van product.code of title
         const perfectMatchByCode = searchResults.find(product => product.code.toLowerCase() === trimmedSearchTerm);
         const perfectMatchByTitle = searchResults.find(product => product.title.trim().toLowerCase() === trimmedSearchTerm);
-    
+
         if (perfectMatchByCode) {
             // Als er een perfecte match is op product.code
-            searchResults = [perfectMatchByCode]; 
-            suggestionText.style.display = 'none'; 
+            searchResults = [perfectMatchByCode];
+            suggestionText.style.display = 'none';
             notFoundContainer.style.display = 'none'; // Verberg 'not found' tekst
-            
+
         } else if (perfectMatchByTitle) {
             // Als er een perfecte match is op product.title
             searchResults = [perfectMatchByTitle];
-            suggestionText.style.display = 'none'; 
+            suggestionText.style.display = 'none';
             notFoundContainer.style.display = 'none';
         } else if (searchResults.length > 0) {
             // Geen perfecte match, maar wel suggesties
@@ -492,86 +485,63 @@ syncSidebarWithSelectedFilters(); // Zorg dat sidebar en container gelijk zijn b
             notFoundContainer.style.display = 'block'; // Toon 'not found' tekst
             return; // Stop verdere uitvoering als er geen resultaten zijn
         }
-    
-    
+
         // Laad de eerste pagina van de zoekresultaten
         currentPage = 1; // Start altijd met pagina 1
         loadPage(currentPage);
-        loadingIndicator.style.display = 'none';  
+        loadingIndicator.style.display = 'none';
     }
-    
 
+    function loadPage(page) {
+        productGrid.innerHTML = ''; // Dit zorgt ervoor dat je begint met een schone lijst
+        loadingIndicator.style.display = 'block'; // Toon de laadanimering
 
-function loadPage(page) {
-    productGrid.innerHTML = ''; // Dit zorgt ervoor dat je begint met een schone lijst
-    loadingIndicator.style.display = 'block'; // Toon de laadanimering
+        const start = (page - 1) * itemsPerPage;
+        const end = start + itemsPerPage;
 
-    const start = (page - 1) * itemsPerPage;
-    const end = start + itemsPerPage;
+        currentPage = page;
+        updateURLWithPageNumber(page);
 
-    // Filteren van producten op basis van geselecteerde filters
-    let filteredProducts = getFilteredProducts(); 
+        // Filteren van producten op basis van geselecteerde filters
+        let filteredProducts = getFilteredProducts();
 
-    // Laad producten: als er perfecte matches zijn, gebruik die; anders, gebruik de resultaten of originele producten
-    const pageProducts = searchResults.length > 0 ? searchResults.slice(start, end) : filteredProducts.slice(start, end);
-    
-    // Bewaar de huidige scrollpositie
-    const scrollPosition = window.scrollY;
+        // Laad producten: als er perfecte matches zijn, gebruik die; anders, gebruik de resultaten of originele producten
+        const pageProducts = searchResults.length > 0 ? searchResults.slice(start, end) : filteredProducts.slice(start, end);
 
-    // Zorg ervoor dat je de producten niet dubbel toevoegt
-    productGrid.innerHTML = ''; // Nogmaals, leeg de product grid voordat je nieuwe producten laadt
+        // Bewaar de huidige scrollpositie
+        const scrollPosition = window.scrollY;
 
-    setTimeout(() => {
-        // Voeg de producten van de huidige pagina toe aan het grid
-        pageProducts.forEach(product => {
-            productGrid.innerHTML += createProductCard(product);
-        });
-        
-        // Voeg lege placeholders toe als er minder dan 6 producten zijn (voor 2 rijen van 3)
-        const emptySlots = itemsPerPage - pageProducts.length;
-        for (let i = 0; i < emptySlots; i++) {
-            productGrid.innerHTML += `
+        // Zorg ervoor dat je de producten niet dubbel toevoegt
+        productGrid.innerHTML = ''; // Nogmaals, leeg de product grid voordat je nieuwe producten laadt
+
+        setTimeout(() => {
+            // Voeg de producten van de huidige pagina toe aan het grid
+            pageProducts.forEach(product => {
+                productGrid.innerHTML += createProductCard(product);
+            });
+
+            // Voeg lege placeholders toe als er minder dan 6 producten zijn (voor 2 rijen van 3)
+            const emptySlots = itemsPerPage - pageProducts.length;
+            for (let i = 0; i < emptySlots; i++) {
+                productGrid.innerHTML += `
                 <div class="empty-product-card">
                     <div style="background-color: white; height: 250px;"></div> <!-- Placeholder -->
                 </div>
             `;
-        }
+            }
 
-        // Zorg ervoor dat de paginatie werkt, zelfs bij zoekresultaten
-        setupPagination(searchResults.length > 0 ? searchResults.length : filteredProducts.length);
-        loadingIndicator.style.display = 'none'; // Verberg de laadanimering
-        
-        // Herstel de scrollpositie na het laden van de nieuwe inhoud
-        window.scrollTo(0, scrollPosition);
-    }, 0);
-}
+            // Zorg ervoor dat de paginatie werkt, zelfs bij zoekresultaten
+            setupPagination(searchResults.length > 0 ? searchResults.length : filteredProducts.length);
+            loadingIndicator.style.display = 'none'; // Verberg de laadanimering
+
+            // Herstel de scrollpositie na het laden van de nieuwe inhoud
+            window.scrollTo(0, scrollPosition);
+        }, 0);
+    }
 
     // Initialiseer de pagina met de eerste producten
     loadPage(currentPage);
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 function addToCart(productTitle, productCode, productPrice, productImage, short_description = 'Geen beschrijving beschikbaar.', isRecommended = false, fromPopup = false) {
@@ -598,7 +568,6 @@ function addToCart(productTitle, productCode, productPrice, productImage, short_
         console.log(`New product ${productTitle} added to cart with quantity: 1.`);
     }
 
-
     // Sla de cart op in localStorage
     localStorage.setItem('cart', JSON.stringify(cart));
 
@@ -623,12 +592,6 @@ function addToCart(productTitle, productCode, productPrice, productImage, short_
         button.innerHTML = 'Added to Cart'; // Verander de knoptekst
     }
 }
-
-
-
-
-
-
 
 function updateQuantityInCart(productName, productPrice, productImage, short_description, newQuantity) {
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
@@ -660,19 +623,14 @@ function updateQuantityInCart(productName, productPrice, productImage, short_des
     updateCartCount();
 }
 
-
-
-
-
 async function loadPopup(productName, productPrice, productImage, productCode, short_description) {
     console.log("Loading popup for:", productCode); // Debugging
 
     // Verkrijg de aanbevolen producten
     const recommendedProducts = await fetchRecommendedProducts(productCode);
-    
-        // Nu de popup geladen is, kunnen we de inhoud aanpassen
-        showPopup(productName, productPrice, productImage, short_description, recommendedProducts);
 
+    // Nu de popup geladen is, kunnen we de inhoud aanpassen
+    showPopup(productName, productPrice, productImage, short_description, recommendedProducts);
 }
 
 async function showPopup(productName, productPrice, productImage, short_description, recommendedProducts) {
@@ -747,7 +705,6 @@ async function showPopup(productName, productPrice, productImage, short_descript
     overlay.style.display = 'block';
 }
 
-
 function updateCartPriceInPopup(productName, totalPrice, quantity) {
     // Haal de huidige winkelwagen op uit localStorage
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
@@ -763,15 +720,10 @@ function updateCartPriceInPopup(productName, totalPrice, quantity) {
 
     // Sla de bijgewerkte winkelwagen op in localStorage
     localStorage.setItem('cart', JSON.stringify(cart));
-    
+
     // Optioneel: update de winkelwagen teller (als je die ergens hebt)
     updateCartCount();
 }
-
-
-
-
-
 
 async function fetchRecommendedProducts(productCode) {
     const departmentCode = productCode.slice(0, 3);
@@ -780,14 +732,14 @@ async function fetchRecommendedProducts(productCode) {
         const response = await fetch('products.json');
         const data = await response.json();
         let allProducts = [];
-        
+
         for (const group in data.discipline_group) {
             allProducts = allProducts.concat(data.discipline_group[group]);
         }
 
         const recommendedProducts = allProducts.filter(product =>
             product.code.startsWith(departmentCode) && product.code !== productCode
-        ).slice(0, 3); 
+        ).slice(0, 3);
 
         return recommendedProducts.map(product => ({
             code: product.code,
@@ -802,11 +754,6 @@ async function fetchRecommendedProducts(productCode) {
     }
 }
 
-
-
-
-
-
 function updateCartCount() {
     // Haal de winkelwageninhoud op uit localStorage
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
@@ -818,21 +765,16 @@ function updateCartCount() {
     document.getElementById('cart-count').textContent = itemCount;
 }
 
-
 document.addEventListener('DOMContentLoaded', updateCartCount);
-
-
 
 function hideStorePopup() {
     const popup = document.getElementById('popup');
     const overlay = document.getElementById('popup-overlay');
 
     popup.style.display = 'none';
-        overlay.style.display = 'none';
+    overlay.style.display = 'none';
 
 }
-
-
 
 function truncateTitle(title, maxLength = 15) {
     if (title.length > maxLength) {
@@ -840,4 +782,3 @@ function truncateTitle(title, maxLength = 15) {
     }
     return title;
 }
-

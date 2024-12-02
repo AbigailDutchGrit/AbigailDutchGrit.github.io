@@ -1,0 +1,206 @@
+/* Color variables */
+:root {
+    --white: #ffffff;
+    --black: #000000;
+    --green: #7ded89;
+    --sub_antracite: #60625f;
+    --par_antracite: #60625f;
+    --light_gray: #edebea;
+    --light_blue: #42bedd;
+    --dark_blue: #2f7193;
+    --pink: #EB6363;
+}
+
+.about-us2-body {
+    font-family: Arial, sans-serif;
+    background-color: var(--white);
+    margin: 0;
+    padding: 0;
+    color: var(--sub_antracite);
+}
+
+.about-us2-h2 {
+    color: var(--dark_blue);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.about-us2-partners, .about-us2-careers {
+    padding: 40px 20px;
+    background-color: var(--white);
+    text-align: center;
+}
+
+/* Wrapper for all logos */
+.about-us2-logos {
+    display: flex;
+    flex-direction: column; /* Vertically stack the rows */
+    gap: 20px;
+    padding: 20px;
+    align-items: center;
+}
+
+/* First row of three logos side by side */
+.about-us2-row {
+    display: flex;
+    justify-content: space-around; /* Spread the three logos */
+    gap: 20px;
+    width: 100%;
+    max-width: 600px; /* Max width for the row */
+}
+
+/* Second row of two logos centered */
+.about-us2-row-centered {
+    display: flex;
+    justify-content: center; /* Center the two logos */
+    gap: 20px;
+    width: 100%;
+    max-width: 400px; /* Smaller for better appearance */
+}
+
+.about-us2-logos img {
+    max-width: 150px; /* Set max width for the logos */
+    max-height: 100px; /* Set max height to prevent logos from being too large */
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    object-fit: contain; /* Maintain aspect ratio of the logo */
+}
+
+.about-us2-cta-btn, .about-us2-job-btn {
+    background-color: var(--pink);
+    color: var(--white);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* Adjusted section */
+.about-us2-cta {
+    display: flex;
+    justify-content: center; /* Center both the text and button */
+    align-items: center; /* Vertically align items */
+    background-color: var(--dark_blue);
+    color: var(--white);
+    padding: 40px;
+    gap: 20px; /* Adjust the gap between the text and the button */
+}
+
+.about-us2-cta p {
+    margin: 0;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.about-us2-cta-btn {
+    background-color: var(--pink);
+    color: var(--white);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    text-decoration: none;
+    margin-top: 0; /* Remove extra margin on top */
+}
+
+.about-us2-job-offers {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin: 40px 0;
+}
+
+.about-us2-job {
+    background-color: var(--white);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+}
+
+.about-us2-job img {
+    width: 150px; /* Set width for job images */
+    height: 150px; /* Set height for job images */
+    object-fit: cover; /* Cover to maintain aspect ratio */
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.about-us2-job h3 {
+    color: var(--sub_antracite);
+    margin-bottom: 10px;
+}
+
+/* Media Queries for Responsive Design */
+
+/* Mobile screens (phones) */
+@media (max-width: 750px) {
+    .about-us2-cta {
+        flex-direction: column; /* Stack text and button vertically */
+        gap: 10px; /* Reduce gap */
+        text-align: center; /* Center text */
+        padding: 20px; /* Reduce padding */
+    }
+
+    .about-us2-cta p {
+        font-size: 24px; /* Smaller font size for mobile */
+    }
+
+    .about-us2-cta-btn {
+        width: 100%; /* Make button full width */
+        padding: 15px; /* Increase padding for easier clicking */
+    }
+
+    .about-us2-partners, .about-us2-job-offers {
+        display: block; /* Stack elements vertically */
+        padding: 20px 0; /* Adjust padding for spacing */
+    }
+    
+    .about-us2-row, .about-us2-row-centered, .about-us2-job-offers {
+        flex-direction: column; /* Stack logos/jobs vertically */
+        align-items: center; /* Center them on the page */
+        gap: 20px; /* Add some space between elements */
+    }
+
+    .about-us2-job {
+        width: 90%; /* Ensure job offers take up full width */
+    }
+}
+
+/* iPhone SE (max-width: 375px) */
+@media (max-width: 375px) {
+    .about-us2-cta p {
+        font-size: 20px; /* Smaller text for better fit */
+        line-height: 1.2; /* Adjust line height for readability */
+    }
+
+    .about-us2-cta {
+        padding: 15px; /* Reduce padding for smaller screen */
+        gap: 8px; /* Further reduce gap */
+    }
+
+    .about-us2-cta-btn {
+        padding: 12px 20px; /* Slightly reduce padding */
+        font-size: 14px; /* Smaller font size for the button */
+    }
+}
+
+/* Larger screens (up to 1200px) */
+@media (max-width: 1200px) {
+    .about-us2-cta {
+        justify-content: center;
+        gap: 15px; /* Slightly reduce gap for tablets and mid-sized screens */
+    }
+
+    .about-us2-cta p {
+        font-size: 28px; /* Adjust text size for mid-sized screens */
+    }
+
+    .about-us2-cta-btn {
+        padding: 12px 20px; /* Adjust button padding */
+    }
+}

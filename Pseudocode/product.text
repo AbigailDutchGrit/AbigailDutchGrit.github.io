@@ -1,0 +1,238 @@
+Pseudocode HTML:
+
+Begin van een html document:
+de taal is engels 
+de UTF-08
+viewport zodat het responsief wordt
+een favicon
+link voor google icons en stylesheet
+link naar favicon 
+JavaScript bestand voor cookies
+boxicons voor extra pictogrammen
+titel van de pagina
+
+Body Sectie
+navbar:
+logo met link naar home pagina
+mobiele menuicoon
+linkjes naar de andere pagina's 
+zoekbalk
+login icoon en winkelwagen pagina 
+javascript 
+
+Hoofd Inhoud Sectie:
+
+Product Wrapper:
+een wrapper voor productdetails en afbeeldingen
+
+Terugknop:
+een terug knop naar de vorige pagina 
+
+Productcontainer:
+Verdeel de inhoud in twee secties:
+Product Afbeelding Sectie:
+Toon een productafbeelding.
+Toon een sectie "Vaak samen gekocht", met miniaturen van gerelateerde producten.
+
+Product Details Sectie:
+Toon de producttitel ("Depot Software Cloud Edition").
+Geef keuzemenu's voor het selecteren van de "Vorm" (bijv. boek of animatie) en "Taal" (Nederlands, Engels, etc.).
+Toon de productbeschrijving.
+
+Voeg een "In Winkelwagen"-knop toe.
+
+Begin van de footer
+logo en links 
+logo met link naar de homepagina
+contact
+email en telefoonnummer
+adres en informatie
+titel 
+linkjes naar verschillende pagina's 
+titel van Customers
+linkjes voor de login, support en privacy instellingen
+afbeelding van het team 
+zoekbalk
+vlaggen voor verschillende talen 
+en de partnerlogo's
+
+einde Footer-inhoud
+
+Onderkant van de footer
+knop voor privacy instellingen
+copyright en links naar voorwaarden en de sitemap
+sociale media iconen
+einde Footer-onderkant
+
+knop om naar boven te scrollen
+icoon om naar boven te scrollen
+
+einde body 
+
+einde HTML-document
+
+-----------------------------------------------------------------------------------------------------
+
+Pseudocode CSS:
+
+Stijl voor de kleuren:
+DEFINIEER KLEUREN:
+WIT = #ffffff
+ZWART = #000000
+GROEN = #7ded89
+ROOD = #ff002f
+ANTRACIET = #60625f
+LICHT_GRijs = #edebea
+LICHT_BLAUW = #42bedd
+DONKER_BLAUW = #2f7193
+
+Basis stijlen voor de body:
+lettertype arial of standaard sans serif
+achtergrondkleur wit 
+standaardmarges en opvulling
+
+Product wrapper layout:
+Flexbox: gebruik flex om de inhoud uit te lijnen.
+Uitlijnen: items worden horizontaal gecentreerd met een tussenruimte van 20px.
+Breedte: maximaal 1200px, met automatische marges aan de zijkanten om het in het midden te plaatsen.
+Padding aan beide kanten van 20px.
+
+Terugknop container:
+Flex-shrink: voorkom dat de knop kleiner wordt.
+
+Stijlen voor de terugknop:
+Padding: 10px boven/onder, 20px links/rechts.
+Achtergrondkleur: rood.
+Tekstkleur: wit.
+Rand: geen.
+Cursor: pointer bij hover.
+Border-radius: afgeronde hoeken.
+Hover-effect: verander de achtergrondkleur naar een donkerder rood bij hover.
+
+Hoofdcontainer voor productinformatie:
+Flexbox: flex-wrap gebruiken om de inhoud in rijen te laten doorlopen bij kleinere schermen.
+Breedte: maximaal 1000px.
+Padding: 20px.
+Rand: lichte rand en afgeronde hoeken.
+Achtergrondkleur: wit.
+
+Product afbeelding container:
+Flex: 1 om flexibel te schalen.
+Maximale breedte: 400px.
+Padding aan de rechterkant van 20px.
+
+Stijlen voor de productafbeelding:
+Afmetingen: 400px bij 400px.
+Border-radius: afgeronde hoeken voor de afbeelding.
+
+Vaak samen gekocht sectie:
+Marges: boven 20px, rand boven met lichte kleur en padding van 20px.
+
+Titel in de vaak samen gekocht sectie:
+Marges: boven en onder 10px.
+Lettergrootte: 1.2em.
+Kleur: donkergrijs.
+
+Miniatuurafbeeldingen in de vaak samen gekocht sectie:
+Flexbox: toon miniaturen naast elkaar.
+Tussenruimte tussen miniaturen: 10px.
+Afmetingen van miniaturen: 80px bij 80px.
+Border: lichte rand en afgeronde hoeken.
+
+Product details sectie:
+Flex: 1 om flexibel te schalen.
+Maximale breedte: 600px.
+Tekstkleur: donkergrijs.
+
+Productopties container (Formulier en taal):
+Flex-direction: kolom.
+Tussenruimte tussen elementen: 15px.
+Onderste marge: 20px.
+
+Stijlen voor formulier en taalopties:
+Flexbox: gebruik flex om de elementen op één rij te plaatsen.
+Tussenruimte tussen label en select: 10px.
+
+Labels voor formulier en taalopties:
+Breedte: 100px.
+Tekstuitlijning: links.
+Vetgedrukt en donkergrijze tekst.
+
+Select dropdowns voor formulier en taalopties:
+Breedte: 200px.
+Padding: 5px 10px.
+Lettergrootte: 1em.
+Border: lichte rand en afgeronde hoeken.
+Achtergrondkleur: wit.
+Bij focus: randkleur verandert naar blauw.
+
+Product beschrijving stijlen:
+Lettergrootte: 1.1em.
+Onderste marge: 20px.
+Tekstkleur: donkergrijs.
+
+Knop om aan winkelwagen toe te voegen:
+Volledige breedte.
+Padding: 15px.
+Achtergrondkleur: rood.
+Tekstkleur: wit.
+Lettergrootte: 1.2em.
+Vetgedrukt.
+Border: geen.
+Cursor: pointer.
+Border-radius: afgeronde hoeken.
+Onderste marge: 30px.
+Hover-effect: achtergrondkleur verandert naar een donkerder rood.
+
+Responsief ontwerp voor schermen kleiner dan 1160px:
+Product wrapper verandert naar kolomlayout.
+Product details krijgt extra marge aan de rechterkant.
+
+Responsief ontwerp voor tablets (schermen kleiner dan 700px):
+Product wrapper wordt een kolomlayout.
+
+Responsief ontwerp voor mobiele telefoons (schermen kleiner dan 475px):
+Product wrapper blijft in kolomlayout.
+Productafbeelding wordt 95% van de breedte.
+Miniatuurafbeeldingen blijven dezelfde afmetingen, zonder overgangseffect.
+
+einde van de css
+
+------------------------------------------------------------------------------------------------------------------------------------
+
+Pseudocode JavaScript: 
+
+Selecteer alle taaloptieknoppen op de pagina
+languageButtons: verkrijg alle knoppen binnen het element met de klasse .language-options.
+
+Selecteer alle boekoptieknoppen op de pagina:
+bookButtons: verkrijg alle knoppen binnen het element met de klasse .book-form-options.
+
+Selecteer de winkelwagenknop:
+cartButton: verkrijg de knop met de klasse .cart-button.
+
+Definieer variabelen voor geselecteerde opties:
+selectedLanguage: initialiseer met null (geen geselecteerde taal).
+selectedBook: initialiseer met null (geen geselecteerd boek).
+
+Definieer functie updateCartButton:
+Controleer of zowel selectedLanguage als selectedBook niet null zijn.
+Als beide geselecteerd zijn:
+Zet de eigenschap disabled van cartButton op false (de knop is ingeschakeld).
+
+Anders:
+Zet de eigenschap disabled van cartButton op true (de knop is uitgeschakeld).
+Voeg event listeners toe aan taaloptieknoppen
+
+Voor elke button in languageButtons:
+Voeg een klikgebeurtenis toe:
+Haal de waarde van de data-lang attribuut van de knop op en sla deze op in selectedLanguage.
+Roep de functie updateCartButton aan om de status van de winkelwagenknop bij te werken.
+Voeg event listeners toe aan boekoptieknoppen
+
+Voor elke button in bookButtons:
+Voeg een klikgebeurtenis toe:
+Haal de waarde van de data-book attribuut van de knop op en sla deze op in selectedBook.
+Roep de functie updateCartButton aan om de status van de winkelwagenknop bij te werken.
+
+einde van de javascript

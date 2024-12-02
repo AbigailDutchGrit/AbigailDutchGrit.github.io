@@ -1,0 +1,53 @@
+:root {
+    --white: #ffffff;
+    --black: #000000;
+    --green: #7ded89;
+    --red: #ff002f;
+    --antracite: #60625f;
+    --light_gray: #edebea;
+    --light_blue: #42bedd;
+    --dark_blue: #2f7193;
+    --pink: #EB6363;
+}
+
+.nav-bar-icons {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+/* Styling for the cart icon */
+.icon-button {
+    position: relative;
+    display: flex;
+    align-items: center;
+    text-decoration: none; /* Prevent underlines */
+}
+
+.material-icons {
+    font-size: 24px; /* Adjust the size of the cart icon */
+    margin-right: 5px; /* Space between icon and count */
+}
+
+/* The round circle that contains the cart count */
+.cart-count {
+    position: absolute;
+    top: 0px; /* Adjust the vertical position to overlap */
+    right: 10px; /* Adjust the horizontal position */
+    background-color: var(--pink);
+    color: var(--white); /* Ensure the text is white */
+    border-radius: 50%;
+    padding: 2px 2px; /* Add a bit of horizontal padding */
+    min-width: 20px; /* Minimum width for the circle */
+    height: 20px; /* Fixed height for a round shape */
+    display: none; /* Initially hidden */
+    justify-content: center;
+    align-items: center;
+    text-align: center; /* Center the text */
+    line-height: 20px; /* Vertically center text */
+}
+
+#cart-count {
+    font-size: 12px;
+    text-align: center;
+}

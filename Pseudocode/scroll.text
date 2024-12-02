@@ -1,0 +1,63 @@
+Pseudocode JavaScript:
+
+begin scroll event listener
+
+voeg een event listener toe voor wanneer het venster wordt gescrold
+begin controle scrollpositie
+
+als de verticale scrollpositie ('scrollY') groter is dan 200:
+voeg de css-klasse 'show' toe aan de knop met id 'scrollToTopBtn' (toon de knop)
+anders:
+verwijder de css-klasse 'show' van de knop (verberg de knop) eind controle scrollpositie
+eind scroll event listener
+begin click event listener voor scroll-to-top knop
+
+voeg een click event listener toe aan de knop met id 'scrollToTopBtn'
+begin scroll naar boven
+
+scroll het venster naar de bovenkant van de pagina (positie 0)
+gebruik een vloeiende scroll-animatie ('smooth') eind scroll naar boven
+eind click event listener voor scroll-to-top knop
+
+einde van de javascript
+
+------------------------------------------------------------------------------------------------------
+
+Pseudocode CSS:
+
+Stijl voor de kleuren:
+DEFINIEER KLEUREN:
+WIT = #ffffff
+ZWART = #000000
+GROEN = #7ded89
+ROOD = #ff002f
+ANTRACIET = #60625f
+LICHT_GRijs = #edebea
+LICHT_BLAUW = #42bedd
+DONKER_BLAUW = #2f7193
+
+De scroll-to-top knop wordt gestyled met de volgende eigenschappen:
+
+De knop met ID 'scrollToTopBtn' wordt onderaan de pagina vastgezet (fixed position), 20 pixels van zowel de onderkant als de rechterkant.
+
+De afmetingen zijn 70 pixels breed en 50 pixels hoog, met een donkerblauwe achtergrond en een lichtblauwe rand van 2 pixels.
+
+De hoeken zijn afgerond met een radius van 15 pixels.
+
+Flexbox wordt gebruikt om de inhoud van de knop (bijvoorbeeld een icoon) netjes in het midden te centreren.
+
+De tekstkleur van de knop is wit en de cursor verandert in een pointer bij hover.
+
+Standaard is de knop onzichtbaar met een doorzichtigheid (opacity) van 0 en de zichtbaarheid (visibility) is ingesteld op verborgen (hidden).
+
+Er is een overgangseffect van 0,3 seconden toegevoegd voor veranderingen in doorzichtigheid, zichtbaarheid, achtergrondkleur en randkleur.
+
+De z-index is ingesteld op 1000, zodat de knop altijd boven andere elementen wordt weergegeven.
+Hover-effect:
+Bij hover verandert de achtergrondkleur naar lichtblauw terwijl de randkleur donkerblauw blijft.
+De scroll-icoon binnen de knop krijgt een lettergrootte van 30 pixels.
+
+'Show' klasse:
+Wanneer de knop de 'show' klasse krijgt (als de pagina is gescrold), wordt de doorzichtigheid op 1 gezet en de zichtbaarheid wordt veranderd naar 'visible', waardoor de knop zichtbaar wordt.
+
+einde van de css

@@ -1,0 +1,42 @@
+Pseudocode CSS:
+
+Stijl voor de kleuren van de pagina
+- Wit: #ffffff (white)
+- Zwart: #000000 (black)
+- Groen: #7ded89 (green)
+- Antraciet: #60625f (Subheaders & Paragraph)
+- Lichtgrijs: #edebea (Background color)
+- Lichtblauw: #42bedd (Primary brand color)
+- Donkerblauw: #2f7193 (Secondary brand color)
+- Roze: #EB6363 (Contrast color)
+
+Stijl voor de buttons
+De klasse "pink_button"
+de achtergrondkleur is roze 
+geen rand 
+de hoeken zijn rond met 7px
+
+De klasse shine stijl
+de z index is 1
+positie is op relative
+fontgrootte en lettertype
+padding van boven en onder en links en rechts 
+geen outline
+geen rand
+voorkom overflow
+de cursor wordt pointer
+
+stijl voor de shine::after
+zet de inhoud in een lege string 
+stel de z index op -1 
+achtergrondkleur is op witte transparant 
+positie is op absolute
+element rechts 60%, bovenaan op -90%, en onderaan op -90%
+breedte op 1.25em
+transform element buiten het zicht 
+
+stijl voor shine:hover::after
+overgangseffect
+element verplaatsen
+
+einde van de button styles

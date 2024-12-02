@@ -1,0 +1,54 @@
+:root {
+    --white: #ffffff;
+    /* white */
+    --black: #000000;
+    /* black */
+    --green: #7ded89;
+    /* green */
+    --antracite: #60625f;
+    /* Subheaders & Paragraph */
+    --light_gray: #edebea;
+    /* Background color */
+    --light_blue: #42bedd;
+    /* Primary brand color */
+    --dark_blue: #2f7193;
+    /* Secondary brand color */
+    --pink: #EB6363;
+    /* Contrast color */
+}
+
+#user-icon{
+    padding: 10px 20px;
+}
+
+.dropdown {
+    display: none; /* Standaard verberg de dropdown */
+    position: absolute;
+    background-color: white; /* Achtergrondkleur */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 100;
+    min-width: 100px; /* Pas de breedte aan naar wens */
+    border-radius: 5px; /* Afgeronde hoeken */
+    opacity: 0; /* Begin met onzichtbaar */
+    transition: opacity 0.3s ease; /* Overgang voor zichtbaarheid */
+    width: 100%;
+}
+
+.dropdown.show {
+    display: block; /* Toegepast als de dropdown zichtbaar is */
+    opacity: 1; /* Maak het zichtbaar */
+}
+
+/* Styling voor de dropdown links */
+.dropdown a {
+    display: block;
+    padding: 8px 16px;
+    color: var(--antracite);
+    text-decoration: none;
+    margin-right: 0px;
+    background-color: var(--white);
+}
+
+.dropdown a:hover {
+    background-color: #42bedd77; /* Hover effect */
+}

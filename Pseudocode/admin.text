@@ -1,0 +1,150 @@
+Pseudocode HTML:
+
+Begin van HTML document
+de taalinstellingen voor de pagina
+
+De hoofdsectie van de pagina
+karakterset is UTF-8
+viewport voor het responsief design
+linkjes voor de style 
+een favicon
+google icons link 
+en de titel van de pagina 
+
+Begin van het body gedeelte van de pagina
+
+Begin van de navigatie balk
+een logo om op te klikken om naar de home pagina te gaan 
+een menu icoon voor elk scherm breedte 
+navigatielinks voor verschillende pagina's 
+een zoekbalk om te kunnen zoeken op de pagina 
+een winkelwagen icoon en een login icoon
+
+Hoofdsectie van de pagina of te wel de main:
+een achtergrond afbeelding 
+een overlay op de achtergrondafbeelding
+een welkomstbericht met de naam 
+knoppen om naar verschillende databases te gaan
+
+Footersectie van de pagina 
+een horizontale lijn
+een logo die naar de home pagina leidt 
+contactinformatie
+een afbeelding van het team 
+een zoekbalk
+verschillende vlaggen voor de taal 
+partnerlogo's
+
+De onderkant van de footer
+knop voor privacy instellingen
+copyright en beleidslinks
+sociale media iconen 
+
+Knop om naar de bovenkant van de pagina te kunnen gaan
+style sheet van JavaScript en CSS
+een scroll icoon
+
+Einde van de body
+Einde van de HTML
+
+
+------------------------------------------------------------------------------------------------------------------------------
+
+Pseudocode CSS:
+
+
+Kleuren voor de gehele pagina
+
+--white: #ffffff
+--black: #000000
+--green: #7ded89
+--red: #ff002f
+--antracite: #60625f
+--light_gray: #edebea
+--light_blue: #42bedd
+--dark_blue: #2f7193
+--pink: #EB6363
+
+De html en de body moeten de volledige hoogte innemen 
+hoogte is 100% 
+marge is 0
+
+Stijl voor de body:
+achtergrondkleur is wit 
+body heeft de minimale hoogte van het venster
+flexbox is lay-out
+
+Stijlen voor de main
+Flexibel ontwerp met padding en centreren van elementen
+
+Stijlen voor de knoppen in de header 
+flexbox  layout met ruimte tussen de knoppen
+
+stijlen voor de portal
+posities en afmetingen 
+flexbox voor de uitlijning 
+de inhoud moet overlopen
+
+Stijl voor de achtergrondafbeelding van de header
+positie zorgt voor dat de hele breedte en hoogte is bedenkt 
+
+Stijlen voor de header
+een donkere overlay voor contrast met de tekst
+
+Stijlen voor de inhoud binnen de header
+kleur van de tekst en de positie van de headerinhoud
+
+Stijlen voor de header box
+achtergrondkleur
+afgeronde hoeken
+schaduw
+centreren van de inhoud 
+
+Stijl voor de tekst binnen de header 
+lettertypes en kleur 
+
+stijl voor de knoppen in header boxen 
+achtergrondkleur
+afgeronde hoeken
+padding
+en hover effect 
+
+stijl voor de orders-label container
+margin
+padding
+achtergrondkleur
+schaduw 
+afgeronde hoeken
+
+stijl voor de orders tabel 
+breedte en border collapse
+
+Stijl voor tekstkoppen en cellen
+consistente padding 
+
+header stijl voor de tabel
+kleur en border voor de tabelkoppen
+
+
+Rij-styling in de tabelbody
+Ondersteunende randen tussen rijen
+
+Statuskleurcodering voor tabelcellen
+Normal (groen), banned (roze), suspended (lichtblauw)
+
+Standaard tekstkleur voor tabelcellen
+Antraciet voor de tekstkleur
+
+Styling voor links die zijn gestileerd als knoppen binnen de tabel
+Achtergrondkleur, afgeronde hoeken, padding en hover-effect
+
+Media-query voor schermen tot 1200px breedte
+- Pas de portal-header hoogte en styling aan
+- Verander de lay-out van de orders-tabel voor mobiel
+- Maak tabelheaders onzichtbaar op mobiel
+- Flexbox lay-out voor tabelrijen op mobiel
+- Label voor elke cel met behulp van data-label attributen
+
+Media-query voor schermen tot 875px breedte
+- Verberg de iconen in de header
+- Pas padding en lay-out van de header-box aan

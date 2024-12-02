@@ -1,0 +1,143 @@
+/* Color variables */
+:root {
+    --white: #ffffff;
+    --black: #000000;
+    --green: #7ded89;
+    --sub_antracite: #60625f;
+    --par_antracite: #60625f;
+    --light_gray: #edebea;
+    --light_blue: #42bedd;
+    --dark_blue: #2f7193;
+    --pink: #EB6363;
+    --light_pink: #f3a6a6;
+}
+
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--white);
+    color: var(--sub_antracite);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* FAQ Section */
+.faq {
+    width: 90%;
+    max-width: 800px;
+    margin: 2rem auto; /* Centre the FAQ section and add margin for spacing */
+    background-color: var(--light_gray); /* Subtle background for FAQ */
+    padding: 1.5rem;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    border: 1px solid var(--white); /* Add white border */
+}
+
+h1 {
+    color: var(--dark_blue);
+    margin-top: 0; /* Remove margin above h1 */
+    text-align: center; /* Center the FAQ title */
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Adjusted margins for headings and paragraphs */
+h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 0.5rem; /* Less space below headings */
+}
+
+p {
+    margin-top: 0.25rem; /* Less space above paragraphs */
+    margin-bottom: 1rem; /* Keep normal space below paragraphs */
+}
+
+.faq-item {
+    margin-bottom: 1.5rem; /* Less space between FAQ items */
+    background-color: var(--white); /* Add white background to each item */
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Soft shadow for each item */
+}
+
+.faq-item h2 {
+    color: var(--dark_blue);
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem; /* Adjust the size of subheadings */
+}
+
+.faq-item p {
+    font-size: 1rem;
+    color: var(--sub_antracite);
+    margin-bottom: 0;
+}
+
+/* Contact Button */
+.contact-btn {
+    background-color: var(--pink);
+    border: none;
+    border-radius: 5px;
+    padding: 0.3rem 0.8rem; /* Significantly smaller padding */
+    font-size: 0.75rem; /* Smaller font size */
+    cursor: pointer;
+    text-align: center;
+    display: inline-block;
+    text-decoration: none;
+    color: var(--white);
+    transition: background-color 0.3s ease;
+}
+
+.contact-btn:hover {
+    background-color: #d15454;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.75rem;
+    }
+
+    .faq {
+        
+        padding: 1.2rem; /* Adjust padding for mobile */
+    }
+
+    .faq-item h2 {
+        font-size: 1.25rem;
+    }
+
+    .faq-item {
+        padding: 0.75rem;
+    }
+
+    .contact-btn {
+        font-size: 0.7rem;
+        padding: 0.25rem 0.6rem; /* Smaller button for mobile */
+    }
+}
+
+/* Extra adjustments for smaller screens */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .faq {
+        width: 80%;
+        padding: 1rem; /* Less padding for smaller screens */
+    }
+
+    .faq-item h2 {
+        font-size: 1.1rem;
+    }
+
+    .faq-item {
+        padding: 0.5rem;
+    }
+
+    .contact-btn {
+        font-size: 0.65rem;
+        padding: 0.2rem 0.5rem;
+    }
+}

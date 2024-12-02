@@ -1,0 +1,345 @@
+/* Color variables */
+:root {
+    --white: #ffffff;
+    --black: #000000;
+    --green: #7ded89;
+    --sub_antracite: #60625f;
+    --par_antracite: #60625f;
+    --light_gray: #edebea;
+    --light_blue: #42bedd;
+    --dark_blue: #2f7193;
+    --pink: #EB6363;
+}
+
+main * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: var(--light_gray);
+    color: var(--sub_antracite);
+}
+
+main h1, h2 {
+    color: var(--dark_blue);
+}
+
+main p {
+    color: var(--sub_antracite);
+}
+
+main button {
+    background-color: var(--pink);
+    color: var(--white);
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+main button:hover {
+    background-color: #d75454;
+}
+
+.about-us {
+    display: flex;
+    justify-content: space-between;
+    padding: 90px;
+    background-color: var(--white);
+}
+
+.about-us .content {
+    max-width: 70%; /* Verhoog de maximale breedte voor de About Us sectie */
+    padding-right: 20px;
+}
+
+.about-us h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: var(--dark_blue);
+}
+
+.about-us p {
+    font-size: 20px;
+    color: var(--sub_antracite);
+    line-height: 1.6;
+}
+
+.about-us a button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: var(--pink);
+    color: var(--white);
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+}
+
+.about-us a button:hover {
+    background-color: var(--sub_antracite);
+}
+
+.about-us .image-container {
+    max-width: 45%;
+}
+
+.about-us .image-container img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Partners Section */
+.partners {
+    text-align: center;
+    padding: 50px;
+    background-color: var(--dark_blue);
+}
+
+.partners h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: var(--white);
+}
+
+.button-container {
+    display: flex; /* Zorg ervoor dat de tekst en de knop naast elkaar staan */
+    justify-content: center; /* Centreer de items */
+    gap: 50px; /* Voeg ruimte tussen de items toe */
+}
+
+.explore-text {
+    color: var(--white);
+    font-size: 16px; /* Pas de grootte van de tekst aan indien nodig */
+}
+
+.partners a button {
+    padding: 10px 20px;
+    background-color: var(--pink);
+    color: var(--white);
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease; /* Voeg een overgangseffect toe */
+}
+
+.partners a button:hover {
+    background-color: #d75454; /* Verander de kleur bij hover */
+}
+
+/* Team Section */
+.team {
+    padding: 110px; /* Houd deze waarde als het goed is */
+    background-color: var(--white);
+}
+
+.team-container {
+    display: flex;
+    flex-direction: row; /* Zorg ervoor dat de teamleden naast elkaar staan */
+    justify-content: center; /* Centreer de items horizontaal */
+    align-items: flex-start; /* Zorg ervoor dat de items bovenaan uitgelijnd zijn */
+    gap: 300px; /* Houd de ruimte tussen de teamleden */
+}
+
+.team-text {
+    max-width: 70%; /* Verhoog de maximale breedte voor de team tekstsectie */
+    text-align: left; /* Align tekst naar links */
+}
+
+.team-text h2 {
+    font-size: 28px;
+    margin-bottom: 10px; /* Verklein de marge onder de titel */
+}
+
+.team-text p {
+    line-height: 1.6;
+    font-size: 20px; /* Verklein de lettergrootte voor betere leesbaarheid */
+    color: var(--sub_antracite);
+    margin-bottom: 15px; /* Verklein deze marge indien nodig */
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Zorg voor een responsieve grid */
+    grid-gap: 20px;
+    max-width: 375px; /* Maak de grid breder */
+    justify-items: center; /* Centreer de items in de grid */
+    margin: 20px auto; /* Centraal uitlijnen */
+}
+
+.team-member {
+    text-align: center;
+    position: relative;
+}
+
+.team-member .avatar {
+    width: 150px; /* Vergroot de avatar */
+    height: 150px; /* Vergroot de avatar */
+    border-radius: 30%;
+    background-color: var(--light_gray);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.team-member .avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 30%;
+}
+
+/* Updated mail icon styling */
+.team-member .mail-icon {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: var(--dark_blue);
+    color: var(--light_blue);
+    border-radius: 50%;
+    padding: 10px;
+    font-size: 35px;
+    transform: translate(5%, 5%);
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.team-member p.name {
+    margin: 5px 0;
+    font-weight: bold;
+    color: var(--dark_blue);
+}
+
+.team-member p.role {
+    margin: 0;
+    color: var(--sub_antracite);
+}
+
+/* Media Queries voor tablets */
+@media (max-width: 1200px) {
+    .about-us .image-container {
+        display: none; /* Verberg de afbeelding voor tablets */
+    }
+
+    /* Hier verplaatsen we de team grid onder de team tekst */
+    .team-container {
+        flex-direction: column; /* Zet teamleden onder elkaar */
+        align-items: center; /* Centreer de items */
+        gap: 20px; /* Ruimte tussen de teamleden */
+    }
+
+    .team-text {
+        order: 1; /* Zorg ervoor dat de team tekst boven de grid komt */
+    }
+
+    .team-grid {
+        order: 2; /* Zorg ervoor dat de team grid onder de tekst komt */
+        margin-top: 20px; /* Voeg ruimte toe boven de grid */
+        align-items: center;
+        margin: 0 auto; /* Zorg ervoor dat de grid gecentreerd is */
+        grid-template-columns: repeat(3, 1fr); /* Houdt het aantal leden per rij gelijk */
+        gap: 15px; /* Verminder de ruimte tussen teamleden */
+    }
+
+    .about-us .content {
+        max-width: 100%; /* Verhoog de maximale breedte voor telefoons */
+    }
+
+    .about-us .image-container {
+        display: none; /* Verberg de afbeelding voor telefoons */
+    }
+
+    .team-member .avatar {
+        width: 100px; /* Maak de avatar kleiner */
+        height: 100px; /* Maak de avatar kleiner */
+    }
+
+    .team-member .mail-icon {
+        padding: 5px; /* Maak de padding kleiner */
+        font-size: 30px; /* Maak het mail icoon kleiner */
+        margin-bottom: 40px; /* Verminder de marge onder het icoon */
+        transform: translate(25%, -20%); /* Reset transform */
+    }
+}
+
+
+/* Media Queries voor telefoons */
+@media (max-width: 575px) {
+    .team-text {
+        max-width: 95%; /* Maak de tekst breder voor telefoons */
+    }
+
+    .team-grid {
+        gap: 10px; /* Verminder de ruimte tussen teamleden */
+        grid-template-columns: repeat(3, 1fr); /* Houdt het aantal leden per rij gelijk */
+        max-width: 375px; /* Houdt de grid in het midden */
+        margin: 0 auto; /* Centraal uitlijnen */
+    }
+
+    .team-container {
+        align-items: center; /* Centreer de items */
+        gap: 20px; /* Ruimte tussen de teamleden */
+    }
+
+    .team-member .avatar {
+        width: 80px; /* Maak de avatar kleiner */
+        height: 80px; /* Maak de avatar kleiner */
+    }
+
+    .team-member .mail-icon {
+        padding: 5px; /* Maak de padding kleiner */
+        font-size: 25px; /* Maak het mail icoon kleiner */
+        margin-bottom: 30px; /* Verminder de marge onder het icoon */
+        transform: translate(25%, -20%); /* Reset transform */
+    }
+}
+
+
+/* Media Queries voor telefoons */
+@media (max-width: 450px) {
+    
+
+    .team-grid {
+        margin: 0 auto; /* Centraal uitlijnen */
+        gap: 10px; /* Ruimte tussen de teamleden */
+        grid-template-columns: 1fr; /* Eén kolom, items komen onder elkaar */
+        max-width: 375px; /* Houdt de grid binnen een vaste breedte */
+    }
+
+    .team-container {
+        align-items: center; /* Centreer de items */
+        gap: 20px; /* Ruimte tussen de teamleden */
+    }
+
+    .team-member .avatar {
+        width: 100px; /* Maak de avatar kleiner */
+        height: 100px; /* Maak de avatar kleiner */
+    }
+
+    .team-member .mail-icon {
+        padding: 5px; /* Maak de padding kleiner */
+        font-size: 30px; /* Maak het mail icoon kleiner */
+        margin-bottom: 30px; /* Verminder de marge onder het icoon */
+        transform: translate(25%, -20%); /* Reset transform */
+    }
+    .team-text {
+        max-width: 100%; /* Maak de tekst breder voor telefoons */
+    }
+
+    .team-member p{
+        font-size: 16.5px;
+    }
+
+}

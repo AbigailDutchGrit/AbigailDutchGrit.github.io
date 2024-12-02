@@ -1,0 +1,216 @@
+Pseudocode HTML:
+
+Begin van een html document:
+de taal is engels 
+de UTF-08
+viewport zodat het responsief wordt
+een favicon
+link voor google icons en stylesheet
+link naar favicon 
+JavaScript bestand voor cookies
+boxicons voor extra pictogrammen
+titel van de pagina
+
+In de <body> sectie:
+Header:
+Voeg een navigatiebalk toe (<nav>):
+Plaats een logo dat de gebruiker naar de homepage leidt bij klik.
+Voeg een menu-icoon toe voor mobiele weergave.
+Voeg navigatielinks toe naar verschillende pagina's (Home, Store, Implementations, About Us, Contact).
+Voeg een zoekbalk toe.
+Voeg iconen toe voor gebruikerslogin en winkelwagentje.
+Laad een script voor de functionaliteit van de navigatiebalk.
+
+Bevestigingspopup
+Bevestigingspopup:
+Een div wordt toegevoegd om een bevestigingspopup te tonen wanneer een gebruiker een product wil verwijderen uit de winkelwagen.
+Hoofdinhoud van de Winkelwagen
+
+Navigatieknop:
+Een knop wordt toegevoegd die gebruikers in staat stelt om terug te gaan naar de vorige pagina.
+
+Winkelwagenproducten Container:
+Een sectie met de titel "Your Shopping Cart" wordt toegevoegd om gebruikers te informeren over hun huidige selectie.
+
+Winkelwagentjes Sectie:
+Voor elk item in de winkelwagen:
+Een div wordt gemaakt voor elk product met de volgende details:
+Productbeschrijving
+Prijs
+Kwantiteitsinvoer
+Een knop om het product uit de winkelwagen te verwijderen.
+Subtotaal en Afrekeninformatie
+
+Subtotaal Sectie:
+Een koptekst "Subtotal" wordt toegevoegd.
+Informatie over de producten en de totale prijs worden weergegeven.
+Een knop om naar de afrekenpagina te navigeren wordt toegevoegd.
+
+Aanbevelingen Sectie:
+Een sectie met aanbevelingen voor andere producten wordt toegevoegd om de gebruiker te stimuleren om meer te kopen.
+Lege Winkelwagen Sectie
+
+Lege Winkelwagen Sectie:
+Deze sectie is zichtbaar wanneer de winkelwagen leeg is:
+Een icoon en titels worden weergegeven die de lege winkelwagen aanduiden.
+Boodschappen worden toegevoegd om gebruikers te informeren over de lege winkelwagen.
+Een knop wordt toegevoegd om gebruikers te stimuleren om door te gaan met winkelen.
+
+Aanbevelingen voor Andere Producten:
+Een sectie met aanbevelingen voor andere producten wordt ook toegevoegd om de gebruikerservaring te verbeteren en hen te helpen nieuwe producten te ontdekken.
+
+Begin van de footer
+logo en links 
+logo met link naar de homepagina
+contact
+email en telefoonnummer
+adres en informatie
+titel 
+linkjes naar verschillende pagina's 
+titel van Customers
+linkjes voor de login, support en privacy instellingen
+afbeelding van het team 
+zoekbalk
+vlaggen voor verschillende talen 
+en de partnerlogo's
+
+einde Footer-inhoud
+
+Onderkant van de footer
+knop voor privacy instellingen
+copyright en links naar voorwaarden en de sitemap
+sociale media iconen
+einde Footer-onderkant
+
+knop om naar boven te scrollen
+icoon om naar boven te scrollen
+
+einde body 
+
+einde HTML-document
+
+------------------------------------------------------------------------------------------------------------------------------
+
+Pseudocode CSS:
+
+Stijl voor de kleuren:
+DEFINIEER KLEUREN:
+WIT = #ffffff
+ZWART = #000000
+GROEN = #7ded89
+ROOD = #ff002f
+ANTRACIET = #60625f
+LICHT_GRijs = #edebea
+LICHT_BLAUW = #42bedd
+DONKER_BLAUW = #2f7193
+
+Invoervelden van Type "Number"
+Breedte: 60px
+Padding: 5px
+Lettergrootte: 16px
+Grijze rand met afgeronde randen (4px)
+Tekst gecentreerd
+Verberg browser-specifieke spinner styling
+
+Body Stijl
+Lettertype: Arial
+Marges en padding: 0
+Koppen (h1 en h2)
+
+Lettertype: Arial
+Tekst: Vetgedrukt
+Kleur: Zwart
+
+Winkelwagentjesectie
+Padding: 20px
+Achtergrondkleur: Wit
+Container Stijl
+
+Maximale breedte: 1200px
+Centreer met automatische marges
+
+Cart-sectie Stijl
+Lay-out: Flexbox
+Items worden gerechtvaardigd met ruimte tussen (gap van 20px)
+
+Cart-items Stijl
+Flexibele breedte: 60%
+Verticaal uitgelijnd met flexbox en gap van 20px
+
+Individuele Cart-items Stijl
+Gebruik flexbox voor uitlijning
+Padding: 20px
+Afgeronde rand: 10px
+Subtiele schaduw
+Achtergrondkleur: Wit
+
+Iteminformatie Stijl
+Flexbox met gap van 15px tussen elementen
+
+Prijs- en Hoeveelheidweergave Stijl
+Flexbox met centrering van items
+
+Subtotaal-sectie Stijl
+Flexibele breedte: 35%
+Padding: 20px
+Afgeronde rand: 10px
+Subtiele schaduw
+Flexbox voor verticale uitlijning
+Maximale hoogte: 500px met verborgen overflow
+
+Knoppen Stijl
+Checkout-knop met roze achtergrond
+Breedte, padding, en ronde hoeken
+Tekst gecentreerd met overgangseffect
+
+Aanbevelingen Sectie Stijl
+Flexbox met omwikkeling van items
+Marges voor extra ruimte
+
+Lege Winkelwagentjes Stijl
+Flexbox voor verticale en horizontale centrering
+Marges voor ruimte
+
+Responsieve Stijlen voor Schermen Kleiner dan 768px
+Stapel cart-secties verticaal
+Cart-items en subtotalen: 100% breed
+Verklein de hoogte voor cart-iconen
+Centreer teksten in lege winkelwagentjes
+
+einde van de css
+
+----------------------------------------------------------------------------------------------------------------------
+
+Pseudocode JavaScript:
+
+Winkelwagentje Bijwerken
+De updateCart() functie beheert de zichtbaarheid van de winkelwagentje-sectie en de boodschap voor een lege winkelwagentje op basis van de aanwezigheid van cart-items.
+
+Elementen Selecteren
+Noodzakelijke elementen zoals de container voor cart-items, de productlijst en het totale prijs-element worden geselecteerd voor verdere interactie.
+
+Totale Prijs Herberekenen
+De recalculateTotal() functie berekent de totale prijs van de cart door de prijs en hoeveelheid van elk item op te tellen, en werkt de weergave bij.
+
+Product Verwijderen
+Met de removeItem(button) functie kan een gebruiker een product uit de cart verwijderen, waarna de totale prijs en de boodschap voor een lege cart indien nodig worden bijgewerkt.
+
+Delete-knoppen Instellen
+De setupDeleteButtons() functie voegt functionaliteit toe aan delete-knoppen, zodat gebruikers eenvoudig producten kunnen verwijderen.
+
+Hoeveelheid Invoeren
+De setupQuantityInputs() functie zorgt ervoor dat veranderingen in de hoeveelheden automatisch de totale prijs herberekenen.
+
+Subtotaal Bijwerken
+Met de updateSubtotal() functie wordt de totale prijs opnieuw berekend en geüpdatet in de productlijst, waarbij ook een boodschap voor een lege winkelwagentje wordt getoond indien nodig.
+
+Pagina Laden
+Bij het laden van de pagina worden verschillende functies uitgevoerd om de cart-informatie en -status te initialiseren, zoals het bijwerken van subtotaal en het instellen van knoppen.
+
+Winkelwagentje Controleren
+De checkCart() functie controleert of de winkelwagentje leeg is en leidt de gebruiker indien nodig door naar een lege winkelwagentje-pagina.
+
+Interactie Met De Cart
+Event listeners zorgen ervoor dat bij elke wijziging in de cart (zoals het verwijderen van een item of het wijzigen van de hoeveelheid) de cart-status wordt bijgewerkt, zodat de interface altijd actueel blijft.
+
+einde van de javascript

@@ -1,0 +1,135 @@
+DEELS AANGEPAST
+
+Pseudocode HTML:
+
+Begin met HTML-document
+
+Begin van de <head> sectie
+Hier worden de karaktersets en viewport toegevoegd
+een titel van de pagina
+link naar de stylesheet 
+Einde van de <head> sectie
+
+Begin met de <body> sectie
+
+// Over Ons Sectie
+Begin met <section> met de klasse "about-us"
+
+begin van de div met de klasse "content"
+Hier staat een H1 met de titel "Over Ons"
+Hier staat de beschrijving van het bedrijf in een paragraaf
+Hier staat een link naar een andere pink in een <a>
+Hier staat een knop met de tekst "ontdek meer" 
+Einde van de link 
+Einde van de div met de klasse "content"
+
+Begin van een div met de klasse "image-container"
+Hier staat een afbeelding 
+Einde van de div met de klasse "image-container"
+
+Einde van de <section> met de klasse "about-us"
+
+// Partners Sectie
+Begin met <section> met de klasse "partners"
+
+Een titel met de tekst "onze partners"
+Een div met de klasse "button-container"
+Hier zit een stuk tekst met "bekijk onze partners" deze zitten in een span, dus blijven altijd op dezelfde lijn (inline element)
+Hier zit een link naar een andere pagina
+Een knop met de tekst "verken"
+Einde van de link naar andere pagina
+Einde van de div met de klasse "button-container"
+
+Einde van de <section> met de klasse "partners"
+
+// Team Sectie
+Begin met <section> met de klasse "team"
+
+Hier begint een nieuwe blok (div) met de klasse "team-text"
+Een titel met de tekst "ons team"
+Een korte omschrijving van het team in een paragraaf (p)
+Einde van de div met de klasse "team-text"
+
+Een nieuwe blok (div) met de klasse "team-container"
+Een nieuwe blok (div) met de klasse "team-grid"
+
+Voor elke teamlid:
+Begint een div met de klasse "team-member"
+Een div met de klasse "avatar
+Een afbeelding met het profiel van een teamlid
+Einde van een div met de klasse "team-member"
+
+Een paragraaf met de naam van het teamlid met de klasse "name"
+Een paragraaf met de rol van het teamlid met de klasse "role"
+een nieuwe klasse met de naam "mail-icon"
+Hier wordt een mail icoon toegevoegd met gebruik van google icons
+
+Einde van de <div>
+Einde van de <div>
+Einde van de herhaling
+
+Einde van de <div>
+Einde van de <div>
+
+Einde van de <section>
+
+Einde van de <body>
+Einde van het HTML-document
+
+--------------------------------------------------------------------------------------------------------------------------------
+
+Pseudocode CSS:
+Stijlen voor de team sectie:
+padding is op 50px
+achtergrondkleur is wit 
+
+Stijlen voor de teamcontainer:
+display is op flex 
+flex direction is een rij 
+justify content is in het midden van de pagina 
+de items beginnen bij start van de flex 
+en de gap (het gat tussen items) is 300px
+
+Tekststijlen voor de team sectie:
+een maximale breedte is op 70%
+en de tekst wordt aan de linker kant uitgelijnd
+
+Stel voor koppen en paragrafen van de team sectie:
+hier staan de lettertypes en de groottes hiervan
+
+Stijlen van de teamgrid:
+Hier staan stijln zodat het mooi naast en onder elkaar blijft staan 
+tussen deze afbeeldingen zit een gap van 20px
+van deze teamgrid staat een maximale breedte van 375px
+de content wordt gecentreerd op het midden van de pagina 
+en de margins worden automatisch gedaan
+
+Stijlen voor de individuele teamleden:
+de tekst wordt uitgelijn in het midden van de pagina 
+de positie staat op relatief
+
+Stel voor de avatar voor de teamleden:
+een breedte en hoogte van 150px
+de border radius is 30% (dit zijn hoe hoekig of rond de randen zijn)
+de achtergrond kleur is lichtgrijs
+en ruimte aan de onderkant is 10px
+
+Stijl voor het mailicoon van de teamleden:
+positie staat op absoluut
+achtergrondkleur is donkerblauw
+het mailicoon is lichtblauw
+de randen zijn 50% rond, waardoor het een rondje is geworden 
+en de padding en de lettergrootte kan je hier ook aanpassen
+
+Media Queries voor responsiviteit:
+Als schermbreedte <= 1200px:
+Verberg de afbeeldingscontainer in de Over Ons sectie
+Verander de richting van de teamcontainer naar kolom
+Pas stijlen aan voor teamtekst en grid
+Stel max-width van de Over Ons inhoud in op 100%
+Pas avatar grootte en mailicoon stijlen aan
+
+Als schermbreedte <= 575px:
+Pas max-width van teamtekst aan naar 90%
+Pas teamgrid gap en grootte aan
+Pas avatar en mailicoon grootte aan

@@ -1,0 +1,62 @@
+[
+    {
+        "title": "Home",
+        "url": "../pages/home.html",
+        "content": "Welcome to Depot Software. We provide solutions for your business needs."
+    },
+    {
+        "title": "Store",
+        "url": "../webshop/store.html",
+        "content": "Visit our store for the latest software products and solutions."
+    },
+    {
+        "title": "Implementation",
+        "url": "../pages/implementations.html",
+        "content": "Our implementation services ensure seamless integration of software into your business."
+    },
+    {
+        "title": "About Us",
+        "url": "../pages/about%20us%201.html",
+        "content": "Learn more about Depot Software and our dedicated team."
+    },
+    {
+        "title": "Meet our partners",
+        "url": "../pages/about%20us%202.html",
+        "content": "Learn more about Depot Software and our dedicated team."
+    },
+    {
+        "title": "Contact",
+        "url": "../pages/contact.html",
+        "content": "Contact us for support or questions."
+    },
+    {
+        "title": "Login",
+        "url": "../portal/login.html",
+        "content": "Log in to access your portal."
+    },
+    {
+        "title": "Portal",
+        "url": "../portal/portal.html",
+        "content": "Access the business portal for all your software management needs."
+    },
+    {
+        "title": "Terms & Conditions",
+        "url": "../pages/terms%20&%20conditions.html",
+        "content": "Read our terms and conditions."
+    },
+    {
+        "title": "FAQ",
+        "url": "../pages/faq.html",
+        "content": "Frequently asked questions about our software and services."
+    },
+    {
+        "title": "Sitemap",
+        "url": "../pages/sitemap.html",
+        "content": "View the sitemap of our website."
+    },
+    {
+        "title": "Shopping Cart",
+        "url": "../webshop/shopping%20cart.html",
+        "content": "View your shopping cart and complete your order."
+    }
+]

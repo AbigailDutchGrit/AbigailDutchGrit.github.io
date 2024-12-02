@@ -1,0 +1,200 @@
+Pseudocode HTML:
+
+Begin van een html document:
+de taal is engels 
+de UTF-08
+viewport zodat het responsief wordt
+een favicon
+link voor google icons en stylesheet
+link naar favicon 
+JavaScript bestand voor cookies
+boxicons voor extra pictogrammen
+titel van de pagina
+
+Maak een header sectie.
+
+Navigatiebalk:
+Voeg een logo toe dat de gebruiker naar de homepage leidt bij klikken.
+Voeg een menu-icoon toe voor mobiele apparaten.
+Maak links naar verschillende secties van de website (Home, Store, Implementation, About Us, Contact).
+Voeg een zoekbalk toe.
+Voeg iconen voor gebruikers- en winkelwagentje-functionaliteiten toe.
+Koppel JavaScript voor de navigatiebalk (met uitgestelde uitvoering).
+Koppel extra stijlen voor de winkelwagenicoon.
+
+Hoofdinhoud:
+In de hoofdinhoud van de pagina wordt een interactieve gebruikerservaring gecreëerd met de volgende elementen:
+
+Popup-Activering:
+Een knop wordt toegevoegd waarmee gebruikers een popup kunnen weergeven met productinformatie.
+
+Overlay voor Popup:
+Een donkere overlay wordt geïmplementeerd om de aandacht op de popup te vestigen. Deze overlay kan ook worden aangeklikt om de popup te verbergen, wat zorgt voor een gebruiksvriendelijke interface.
+
+Popup-Container voor Productinformatie:
+De popup bevat verschillende secties:
+
+Popup-header: Deze sectie toont een succesbericht, samen met een sluitknop waarmee de gebruiker de popup kan sluiten.
+Productdetails: Hier worden de afbeelding en de informatie van het product weergegeven, inclusief de productnaam en prijs.
+Aanbevelingen: Een sectie waarin aanbevolen producten worden gepresenteerd. Voor elk aanbevolen product zijn er afbeeldingen, namen, prijzen en een knop om het product aan de winkelwagen toe te voegen.
+Footer Knoppen: Knoppen die gebruikers de mogelijkheid bieden om "Doorgaan met winkelen" of "Bekijk winkelwagentje" te selecteren.
+
+Begin van de footer
+logo en links 
+logo met link naar de homepagina
+contact
+email en telefoonnummer
+adres en informatie
+titel 
+linkjes naar verschillende pagina's 
+titel van Customers
+linkjes voor de login, support en privacy instellingen
+afbeelding van het team 
+zoekbalk
+vlaggen voor verschillende talen 
+en de partnerlogo's
+
+einde Footer-inhoud
+
+Onderkant van de footer
+knop voor privacy instellingen
+copyright en links naar voorwaarden en de sitemap
+sociale media iconen
+einde Footer-onderkant
+
+knop om naar boven te scrollen
+icoon om naar boven te scrollen
+
+einde body 
+
+einde HTML-document
+
+------------------------------------------------------------------------------------------------------------------------------
+
+Pseudocode CSS:
+
+Stijl voor de kleuren:
+DEFINIEER KLEUREN:
+WIT = #ffffff
+ZWART = #000000
+GROEN = #7ded89
+ROOD = #ff002f
+ANTRACIET = #60625f
+LICHT_GRijs = #edebea
+LICHT_BLAUW = #42bedd
+DONKER_BLAUW = #2f7193
+
+Stijlen voor Hoofdinhoud:
+De hoofdinhoud van de pagina is ontworpen met specifieke stijlen om een aantrekkelijke en gebruiksvriendelijke ervaring te bieden:
+
+Tekstkleuren:
+De tekstkleur voor de hoofdsectie, popup-header, productinformatie en aanbevolen producten is ingesteld op antraciet, wat zorgt voor een goede leesbaarheid en een moderne uitstraling.
+
+Afbeeldingen in de Popup:
+Afbeeldingen binnen de secties voor productinformatie en aanbevelingen hebben een vaste breedte en hoogte van 50px, met afgeronde hoeken (border-radius van 10px) en een marge van 15px aan de rechterkant om ruimte te creëren tussen de afbeeldingen en andere elementen.
+
+Popup-container:
+De popup-container heeft een strakke en moderne styling:
+
+Positie en Afmetingen:
+De container is vast gepositioneerd met een afstand van 10px van de boven- en rechterkant van het venster. De achtergrondkleur is lichtgrijs, met een breedte van 400px, afgeronde hoeken (border-radius van 15px), en padding van 20px.
+
+Schaduw en Z-Index:
+Een subtiele schaduw (0 4px 10px rgba(0, 0, 0, 0.1)) geeft diepte aan de popup, terwijl een z-index van 1000 ervoor zorgt dat deze boven andere elementen verschijnt.
+
+Transitie-effecten:
+Er zijn transitie-effecten ingesteld voor de transform en opacity van de popup, wat zorgt voor een soepele animatie wanneer de popup verschijnt of verdwijnt.
+
+Sluitknop:
+De sluitknop van de popup heeft een prominente en gebruiksvriendelijke styling:
+
+Positie en Stijl:
+De sluitknop is absoluut gepositioneerd in de rechterbovenhoek (top: 10px, right: 10px) en heeft een cursor-instelling die een pointer aan geeft. De fontgrootte is 1.5rem en de tekst is vetgedrukt voor zichtbaarheid.
+Succesbericht Styling:
+De popup-header is ontworpen voor optimale uitlijning:
+
+Flex-weergave:
+De header maakt gebruik van flex-weergave voor een nette uitlijning van elementen. Marges zijn ingesteld voor de popup-header om ruimte te creëren.
+Styling van Aanbevolen Producten:
+De sectie met aanbevolen producten is visueel aantrekkelijk gemaakt:
+
+Kleur en Lay-out:
+De prijs van de aanbevolen producten is ingesteld op donkerblauw, terwijl de sectie zelf ook gebruik maakt van flex-weergave en een marge aan de onderzijde heeft voor een betere uitstraling.
+Footerknoppen in de Popup:
+De knoppen in de footer van de popup zijn gestileerd voor gebruiksgemak:
+
+Flex-weergave:
+De footer knoppen zijn uitgelijnd naar de rechterkant met tussenruimte, wat zorgt voor een nette en georganiseerde lay-out.
+Knop Styling:
+De knoppen in de popup zijn ontworpen voor een opvallende en aantrekkelijke interactie:
+
+Styling van de .pink_button:
+Deze knop heeft een flex-weergave en is gecentreerd, met een achtergrondkleur van roze, geen rand, en een border-radius van 7px. De padding en font-grootte zijn aangepast, en de cursor is ingesteld op pointer. Bij hover wordt de knop groter met een verandering van de achtergrondkleur.
+
+Styling van Andere Knoppen:
+De .dark-blue-button en .light-blue-button zijn eveneens gestileerd met bijpassende achtergrondkleuren, geen rand, padding en een border-radius voor een uniforme uitstraling.
+
+Popup Overlay:
+De overlay is ontworpen om de popup effectiever te verduisteren:
+
+Flex-weergave en Positionering:
+De overlay maakt gebruik van flex-weergave om centering te ondersteunen en heeft een achtergrondkleur met transparantie en een blur-effect, waardoor de focus op de popup wordt gelegd.
+Tekst in de Popup Header:
+De tekst in de header van de popup is gestileerd voor optimale leesbaarheid:
+
+Aanpassingen voor Tekstuitlijning:
+De tekstuitlijning en font-instellingen zijn geoptimaliseerd om een aangename gebruikerservaring te bieden.
+Animatie voor Popup Verbergen:
+Er zijn animaties gedefinieerd voor het verbergen van de popup en de overlay, waardoor het sluiten van de popup soepel en aantrekkelijk aanvoelt.
+
+Responsieve Stijlen:
+Voor verschillende schermformaten zijn er responsieve stijlen ingesteld om de gebruikservaring te optimaliseren:
+
+Voor Schermhoogte ≤ 723px:
+De popup-grootte en tekstgrootte worden aangepast, en de marges en padding voor knoppen worden verminderd om te zorgen dat alles goed past.
+
+Voor Schermbreedte ≤ 480px:
+De popup-container krijgt nieuwe positionering en styling. De tekst en afbeeldingen worden kleiner gemaakt voor een betere mobiele weergave, en de marges tussen elementen en de padding voor knoppen en tekst worden aangepast voor een meer compacte lay-out.
+
+Dit overzicht biedt een duidelijk en gestructureerd beeld van de stijlen en functionaliteiten die zijn ontworpen voor de hoofdinhoud en de popup, wat bijdraagt aan een gebruiksvriendelijke interface.
+
+einde css
+
+-------------------------------------------------------------------------------------------------------------
+
+Pseudocode JavaScript:
+
+Functie hidePopup
+De hidePopup functie is verantwoordelijk voor het verbergen van de popup en de bijbehorende overlay. 
+
+Hier is een samenvatting van wat er gebeurt:
+Elementen Verkrijgen:
+De functie begint met het ophalen van het popup-element en het overlay-element via hun ID's. Deze elementen worden opgeslagen in de variabelen popup en overlay.
+
+Klassen Toevoegen:
+Vervolgens wordt de CSS-klasse 'hide' toegevoegd aan zowel het popup-element als het overlay-element. Dit zorgt ervoor dat de elementen via CSS worden verborgen met een overgangseffect.
+
+Timer Instellen:
+Een timer van 300 milliseconden wordt gestart. Dit is belangrijk voor de synchronisatie van de animatie.
+
+Display Instellen:
+Na de timer wordt de stijl display van het popup-element ingesteld op 'none', waardoor het element niet meer wordt weergegeven op de pagina. Hetzelfde gebeurt voor het overlay-element.
+
+Opmerking: De tijdsduur van de timer is afgestemd op de CSS-transitieduur, zodat de overgang soepel verloopt.
+Functie showPopup
+De showPopup functie toont de popup en de overlay. Hier is een samenvatting van de stappen die worden doorlopen:
+
+Elementen Verkrijgen:
+Net als bij hidePopup, begint deze functie met het ophalen van het popup-element en het overlay-element met behulp van hun ID's. Deze elementen worden ook opgeslagen in de variabelen popup en overlay.
+
+Display Instellen:
+De stijl display van het popup-element wordt ingesteld op 'block', waardoor het zichtbaar wordt. Voor het overlay-element wordt de stijl display ingesteld op 'flex', zodat het de gehele viewport bedekt.
+
+Timer Instellen:
+Een korte timer van 10 milliseconden wordt gestart. Deze korte vertraging is cruciaal voor het effectief toepassen van de CSS.
+
+Klassen Verwijderen:
+Na de timer wordt de 'hide'-klasse verwijderd van zowel het popup-element als het overlay-element. Hierdoor kunnen de elementen verschijnen met een overgangseffect.
+Opmerking: Deze korte vertraging zorgt ervoor dat de CSS-effecten correct worden uitgevoerd en dat de popup op een vloeiende manier in beeld komt.
+
+einde van de javascript

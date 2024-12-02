@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="media/fav-icon">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="../header & footer/cookies.css">
+    <script src="../header & footer/cookies.js" defer></script>
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css">
+    <title>Home</title>
+</head>
+<body>
+
+<!-- Cookie consent banner -->
+<div class="cookie-wrapper">
+    <header>
+        <i class="bx bx-cookie"></i>
+        <h2>Cookie Consent</h2>
+    </header>
+    <div class="cookie-data">
+        <p>To improve our website and offer you a personalized experience, we use a variety of tools as defined in our <a href="privacy policy.html">privacy policy</a>.</p>
+    </div>
+
+    <div class="cookie-buttons">
+        <button class="accept-button" id="acceptBtn">Accept</button>
+        <button class="info-settings-button" id="infoBtn">Info & settings</button>
+    </div>
+</div>
+
+<!-- Popup for detailed cookie settings -->
+<div class="popup-overlay" id="popupOverlay">
+    <div class="popup-box" id="popupBox">
+        <span class="close-popup" id="closePopup">&times;</span>
+        <h3>Choose your cookie settings</h3>
+        <p>This website performs at its best when we are able to collect and analyse your personal browsing behaviour. By analysing the collected data, we can create an even better browsing experience for you! In our effort to collect your information, we make use of tracking cookies.</p>
+        <p>Please make your choice below to give consent for the data collection. More information about the data usage can be found in our <a href="privacystatement.html">privacy statement</a>.</p>
+        <div class="popup-options">
+            <div class="option">
+                <button class="popup-btn" id="anonymousBtn">Anonymous browsing</button>
+                <p>I don't want to share my personal behaviour and understand that some parts of this website may not function properly.</p>
+            </div>
+            <div class="option">
+                <button class="popup-btn" id="fullFunctionBtn">Fully functioning website</button>
+                <p>I agree to share my personal browsing behaviour to allow for a fully functioning website.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <!-- Footer content -->
+</footer>
+
+<script src="script/cookies.js"></script>
+<button id="scrollToTopBtn">
+    <link rel="stylesheet" href="../header & footer/style_scroll.css">
+    <script src="../header & footer/script_scroll.js"></script>
+    <span class="material-symbols-outlined scroll-icon">keyboard_double_arrow_up</span>
+</button>
+</body>
+</html>

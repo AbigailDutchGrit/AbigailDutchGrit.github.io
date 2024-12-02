@@ -1,0 +1,241 @@
+Begin van een HTML-document:
+De taal is Engels (html lang="en").
+UTF-8 codering.
+Viewport voor responsiviteit.
+Favicon.
+Link naar Google Icons en een stylesheet.
+Link naar de favicon.
+JavaScript-bestand voor cookies.
+Boxicons voor extra pictogrammen.
+Titel van de pagina.
+
+Body-sectie:
+
+Header:
+Logo: Klikbaar, leidt terug naar de startpagina.
+Mobiel menu-icoon: Voor mobiele navigatie.
+
+Navigatielinks:
+Link naar Home.
+Link naar Winkel.
+Link naar Implementatie.
+Link naar Over ons.
+Link naar Contact.
+Zoekbalk: Voor het zoeken binnen de site.
+
+Gebruikers- & winkelwageniconen:
+Loginportaal-icoon.
+Winkelwagen-icoon.
+Winkelwagen-aantal: Verborgen teller voor aantal items.
+Script voor navigatiebalk: Om functionaliteit te ondersteunen.
+Stijlen voor winkelwagenicoon: CSS voor het icoon.
+Script voor winkelwagenicoon: JavaScript voor functionaliteit.
+
+Main-sectie:
+
+Hero-sectie:
+Videobackground: Video die automatisch afspeelt, gedempt en in een loop.
+Overlay: Voor visuele effecten over de video.
+Hero-content: Koptekst en link naar de "Oplossingen Winkel".
+
+Carrousel-sectie:
+Navigatieknoppen: Links en rechts om door de carrousel te navigeren.
+Carrousel-container: Bevat de carrousel.
+Carrousel-track: Beweegbaar gedeelte waar slides worden getoond.
+Individuele logo-slides: Meerdere slides met partnerlogo's.
+
+Sectie met promotievideo's:
+Videocontent: Koptekst, beschrijving en link naar de Over ons-pagina.
+Videoframe: Ingesloten YouTube-video.
+
+Quote-sectie:
+Quotetekst met icoon: Een citaat, ondersteund door een grafisch icoon.
+Waarom kiezen voor Depot Software-sectie:
+Sectiekop: Koptekst voor de sectie.
+Keuzeboxen: 3 boxen, elk met een headertekst, icoon en afbeelding.
+Link naar Oplossingen Winkel.
+
+Reviews-sectie:
+Meerdere review-kaarten: Elke kaart heeft een titel, tekst en een footer met klantlogo en details.
+
+Footer:
+Logo: Klikbaar, leidt terug naar de startpagina.
+Footer-container: Omvat de footerinhoud.
+Linkerkant (Contactinformatie):
+Links naar "Start met Depot Software".
+Klantenlinks: Login, Support, Privacy-instellingen.
+Teamafbeelding: Afbeelding van het team.
+Footer zoekbalk: Zoekbalk in de footer.
+Taalvlaggen: Voor het wisselen van taal.
+Partnerlogo's: Logo's van partners.
+
+Onderste laag van de footer:
+Privacy-instellingen-knop.
+Links naar Algemene Voorwaarden, Privacybeleid, en Sitemap.
+Sociale media-iconen: LinkedIn, YouTube, Instagram, RSS.
+
+Scroll naar boven-knop:
+Scroll-icoon: Een knop om terug naar boven te scrollen.
+Stijlen en script voor scrollgedrag: Voor het soepel scrollen.
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Pseudocode CSS:
+
+Stijl voor de kleuren
+WIT = #ffffff
+ZWART = #000000
+GROEN = #7ded89
+ROOD = #ff002f
+ANTRACIET = #60625f
+LICHT_GRijs = #edebea
+LICHT_BLAUW = #42bedd
+DONKER_BLAUW = #2f7193
+PINK = #EB6363
+
+stijlen voor het document:    
+Arial standaardlettertype
+hoogte 100%
+
+body stijl:
+Achtergrondkleur = WIT
+Gebruik flexbox om elementen te ordenen
+Minimale hoogte = 100% van het venster
+
+stijl voor knoppen
+roze knop: 
+Geen rand, afgeronde hoeken, padding en grote tekst
+Cursor = pointer voor klikbare actie
+Bij hover: achtergrondkleur wordt donkerder
+
+
+stijl voor de carousel:
+relatief positie en verborgen overloop 
+maximale breedte 1200px, centreren op de pagina 
+
+stijl carousel track:
+Gebruik flexbox voor horizontale uitlijning
+transities voor animaties
+
+carousel slide: 
+minimale breedte 250px
+afbeelding binnen slides, breedte en hoogte, afgeronde hoeken 
+
+overlay effecten:
+gradient overlays aan de zijkanten voor visueel effect
+
+stijlen voor de hero sectie:
+hero:
+flexbox centreren inhoud 
+hoogte 60vh
+donkerblauwe overlay met blur effect 
+
+stijlen voor de video's:
+video-content:
+flexbox met een lichte achtergrond, afgeronde hoeken, schaduw 
+padding en max-breedte instellen voor responsief ontwerp
+
+video-text:
+tekstinhoud met padding, kleurnotaties voor titels en paragrafen
+
+video frame: 
+reactieve breedtre en vaste hoogte voor video frame
+
+Media querie voor responsief: 
+Als scherm kleiner dan 768px:
+Pas flexbox aan voor verticale lay-out
+Video-iframe responsief maken
+Video-tekst sectie breedte = 100%
+
+einde van de css
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Pseudocode JAVASCRIPT:
+
+Wacht op het laden van de DOM
+Selecteer Carousel Elementen
+
+carouselTrack = .home-carousel-track
+slides = kinderen van carouselTrack
+nextButton = .home-carousel-button.right
+prevButton = .home-carousel-button.left
+Initieer Variabelen
+
+currentSlide = 0 (de huidige slide index)
+isPaused = false (of de carousel pauzeert)
+slideIntervalTime = 3000 (interval tussen automatische slides in ms)
+slideWidth = 265 (breedte van elke slide in pixels)
+SLIDE POSITIES INSTELLEN
+Functie voor Slide Positie
+setSlidePosition(slide, index):
+
+Stel de positie van elke slide in:
+slide.style.left = index * slideWidth px
+Pas Slide Posities aan
+
+Voor elke slide in slides:
+Roep setSlidePosition(slide, index) aan
+SLIDE NAVIGATIE
+Functie om naar een Slide te gaan
+moveToSlide(currentIndex):
+
+Verplaats carouselTrack naar de positie van de huidige slide:
+carouselTrack.style.transform = translateX(-currentIndex * slideWidth px)
+AUTOMATISCHE SLIDE FUNCTIE
+Functie voor Automatisch Sliden
+autoSlide():
+
+Als isPaused == false:
+Verhoog currentSlide (volgende slide)
+currentSlide = (currentSlide + 1) % aantal slides
+Ga naar de nieuwe currentSlide:
+Roep moveToSlide(currentSlide) aan
+AUTOMATISCH SLIDEN STARTEN
+Stel het interval in voor automatisch sliden:
+slideInterval = setInterval(autoSlide, slideIntervalTime)
+PAUZEREN OP HOVER
+Pauzeer Carousel op Hover
+
+Voeg mouseover event toe aan carouselTrack:
+isPaused = true
+
+Voeg mouseout event toe aan carouselTrack:
+isPaused = false
+
+SLIDE INTERVAL HERSTARTEN
+Functie voor Interval Reset
+resetSlideInterval():
+
+Wis het huidige interval
+clearInterval(slideInterval)
+Stel een nieuw interval in:
+slideInterval = setInterval(autoSlide, slideIntervalTime)
+KNOP HANDLERS
+Next Button Click Handler
+nextButton.addEventListener('click'):
+
+Verhoog currentSlide (volgende slide):
+currentSlide = (currentSlide + 1) % aantal slides
+Ga naar de nieuwe currentSlide:
+Roep moveToSlide(currentSlide) aan
+Herstart het slide interval:
+Roep resetSlideInterval() aan
+Previous Button Click Handler
+prevButton.addEventListener('click'):
+
+Verminder currentSlide (vorige slide):
+currentSlide = (currentSlide - 1 + aantal slides) % aantal slides
+Ga naar de nieuwe currentSlide:
+Roep moveToSlide(currentSlide) aan
+Herstart het slide interval:
+Roep resetSlideInterval() aan
+VIDEO CONTROLE OP MOUSEENTER
+Video Hover Afspelen
+
+Selecteer de video:
+video = .home-hero-video
+
+Als video bestaat:
+Voeg mouseenter event toe aan video:
+video.play() (speel de video af)

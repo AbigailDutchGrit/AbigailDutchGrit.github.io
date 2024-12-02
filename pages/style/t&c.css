@@ -1,0 +1,85 @@
+:root {
+    --white: #ffffff;
+    --black: #000000;
+    --green: #7ded89;
+    --sub_antracite: #60625f;
+    --par_antracite: #60625f;
+    --light_gray: #edebea;
+    --light_blue: #42bedd;
+    --dark_blue: #2f7193;
+    --pink: #EB6363;
+}
+
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: var(--white); /* Apply light gray background */
+}
+
+/* Content wrapper that holds the gray container and the image */
+.content-wrapper {
+    display: flex;
+    justify-content: center; /* Center content horizontally */
+    padding: 40px;
+    width: 80%;
+    margin: 50px auto;
+}
+
+/* Gray container for text */
+.tc-container {
+    width: 100%; /* Allow container to take full width */
+    max-width: 600px; /* Max width for larger screens */
+    background-color: var(--light_gray);  /* Light gray background */
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Text inside the gray container */
+.tc-text h2 {
+    font-size: 2em;
+    color: var(--black); /* Apply black for headings */
+    margin-bottom: 20px;
+    text-align: left; /* Align text to the left */
+}
+
+.tc-text p {
+    color: var(--sub_antracite); /* Use sub_antracite for paragraph text */
+    margin-bottom: 25px;
+    text-align: left; /* Align text to the left */
+}
+
+.tc-text a {
+    color: var(--pink); /* Pink color for the links */
+    text-decoration: none;
+    font-weight: bolder;
+    font-size: 16px;
+    text-align: left; /* Align links to the left */
+    text-decoration: underline;
+}
+
+.tc-text a:hover {
+    text-decoration: underline;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .content-wrapper {
+        flex-direction: column;  /* Stack the content vertically */
+        align-items: center;
+        padding: 20px;  /* Adjust padding for smaller screens */
+    }
+
+    .tc-container {
+        width: 100%; /* Make container full width on smaller screens */
+        max-width: 100%; /* Ensure container doesn't exceed screen width */
+        padding: 20px; /* Reduce padding for smaller screens */
+    }
+
+    .tc-text h2, .tc-text p, .tc-text a {
+        text-align: left; /* Keep text aligned to the left */
+    }
+}

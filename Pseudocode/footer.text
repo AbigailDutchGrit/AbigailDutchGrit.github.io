@@ -1,0 +1,87 @@
+Pseudocode CSS:
+
+Begin van de css
+
+Algemene instellingen voor HTML en BODY:
+margin op 0
+voorkom horizontaal scrollen
+
+Footer stijl:
+achtergrondkleur 
+tekstkleur is wit 
+padding aan de footer 
+lettertype is Arial
+de tekst in de footer is gecentreerd
+breedte van de footer is 100%
+
+Secties in de footer:
+margins en padding aan contact, start using en customer secties
+tekstuitlijning op links in contact en start using 
+marge aan de laatste paragraaf in start-using sectie
+
+Footer container:
+de footer container moet een flexbox layout 
+padding in de container
+
+Linker- en rechterzijde van de footer:
+tekstuitlijning links 
+tekstuitlijning rechts 
+de rechterzijde naar de rechterkant 
+
+Koppen en paragrafen in de footer:
+marges aan de koppen en paragraaf
+lettergrootte in voor koppen en paragrafen
+kleur voor in de footer
+
+Zoekcontainer in de footer:
+zoekcontainer 
+richting in op kolom 
+uitlijnen naar links 
+
+Invoerveld voor zoekopdracht:
+padding invoerveld 
+marges invoerveld 
+
+Taalvlaggen:
+breedte taalvlaggen 
+hoogte taalvlaggen
+
+Partnerlogo's:
+maximale hoogte 
+marges 
+
+Onderste gedeelte van de footer:
+layout voor de footer bottom met flexbox
+uitlijnen op center vooor footer bottom 
+
+Privacyknop en sociale iconen:
+achtergrondkleur voor privacyknop
+padding aan privacyknop
+kleur voor sociale iconen 
+
+Stijl voor logo's in de footer:
+maximale breedte en hoogte voor logo's
+
+Horizontale lijn in de footer:
+breedte en hoogte voor de lijn 
+marge aan de lijn 
+
+Footer en container instellingen:
+padding en marges 0 voor footer en container 
+breedte in op 100vw voor footer
+
+Afbeeldingen in de 'over ons' sectie:
+breedte en hoogte voor afbeeldingen 
+marges aan afbeeldingen 
+
+Footer-logo-container:
+footer logo container in flexbox
+uitlijnen naar rechts 
+
+Media queries voor kleinere schermen:
+als scherm kleiner is dan 1300px
+footer container in kolom 
+partner logos in kolom 
+eind als 
+
+einde css 

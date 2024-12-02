@@ -1,0 +1,316 @@
+html {
+    font-family: Arial, sans-serif;
+    height: 100%;
+}
+
+body {
+    background-color: var(--white);
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+.material-icons, .material-symbols-outlined {
+    font-family: 'Material Icons', 'Material Symbols Outlined', sans-serif;
+}
+
+/* Stylig for the active button */
+.pink_button {
+    background-color: var(--pink);
+    border: none;
+    border-radius: 7px;
+}
+
+/* Navbar styling */
+.navbar {
+    display: flex;
+    align-items: center;
+    background-color: var(--light_blue);
+    padding: 10px 20px;
+    border-bottom: 2px solid var(--dark_blue);
+    
+}
+
+/* Styling for the search container */
+.footer-bar-search-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    background-color: var(--white);
+    border-radius: 5px;
+    padding: 5px;
+}
+
+/* Styling for the search container (input area) */
+.footer-bar-search-container input[type="text"] {
+    padding: 10px 20px 10px 40px;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    border-radius: 5px;
+    width: 200px;
+    height: 25px;
+    box-sizing: border-box;
+    font-weight: bold;
+}
+
+/* Navbar Logo Buttons distancer */
+.navbar-logo {
+    margin-right: auto;
+}
+
+/* Navbar Logo image sizer */
+.navbar-logo img {
+    height: 50px;
+    width: auto;
+    
+}
+
+/* Hide the regular navbar buttons */
+.navbar-links a {
+    display: none;
+    border-radius: 5px;
+}
+
+/* Buttons Text Styling */
+.navbar a {
+    text-decoration: none;
+    color: var(--white);
+    padding: 10px 15px;
+    font-size: 16px;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+    margin-right: 5px;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+/* strying for the hover effect */
+.navbar a:hover {
+    background-color: var(--dark_blue);
+    border-radius: 5px;
+}
+
+/* Styling voor de Actieve Link */
+.navbar a.active {
+    background-color: var(--pink);
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+/* Styling for the search container */
+.nav-bar-search-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-left: 20px;
+    background-color: var(--white);
+    border-radius: 5px;
+    padding: 5px;
+}
+
+/* Styling for the search container (input area) */
+.nav-bar-search-container input[type="text"] {
+    padding: 10px 20px 10px 40px;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    border-radius: 5px;
+    width: 200px;
+    height: 25px;
+    box-sizing: border-box;
+    font-weight: bold;
+}
+
+/* Search container 'search' icon*/
+.nav-bar-search-icon {
+    position: absolute;
+    left: 10px;
+    font-size: 20px;
+    color: var(--antracite);
+}
+
+/* navbar icon locations */
+.nav-bar-icons {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+}
+
+/* navbar icon sizes */
+.nav-bar-icons span {
+    font-size: 30px;
+}
+
+/* icon button styling */
+.nav-bar-icon-button {
+    display: flex;
+    align-items: center;
+    color: var(--white);
+    font-size: 30px;
+    margin-left: 1px;
+    transition: color 0.3s ease;
+}
+
+
+/* Media query for smaller screens (mobile) */
+@media screen and (max-width: 1200px) {
+    .navbar {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 10px;
+        background-color: var(--light_blue);
+    }
+
+    /* Logo adjustments */
+    .navbar-logo img {
+        height: 35px;
+        /* Smaller logo */
+    }
+
+    /* Make the menu icon visible */
+    .nav-bar-menu-icon {
+        display: inline-block;
+        font-size: 35px;
+        color: var(--white);
+        cursor: pointer;
+    }
+
+    /* Positioning the login and shopping cart icons closer together */
+    .nav-bar-icons {
+        display: flex;
+        margin-left: 0;
+    }
+
+    /* Reduce the space between the icons */
+    .nav-bar-icon-button {
+        margin-left: 5px;
+    }
+
+    /* Search bar adjustments */
+    .nav-bar-search-container {
+        width: 100%;
+        max-width: 200px;
+        margin-left: 10px;
+    }
+
+    /* smaller text inside the input area */
+    .nav-bar-search-container input[type="text"] {
+        width: 100px;
+        font-size: 12px;
+    }
+}
+
+/* Ensure the menu icon is hidden on larger screens */
+.nav-bar-menu-icon {
+    display: none;
+}
+
+/* Show the menu icon on smaller screens */
+@media screen and (max-width: 1200px) {
+    .nav-bar-menu-icon {
+        display: inline-block;
+        font-size: 35px;
+        color: var(--white);
+        cursor: pointer;
+    }
+
+    /* Hide the regular navbar links */
+    .navbar a {
+        display: none;
+    }
+
+    /* When expanded, show the navbar links and set them in a vertical column */
+    .navbar.expanded a {
+        display: block;
+        text-align: left;
+        padding: 10px 20px;
+        font-weight: bold;
+    }
+
+    .navbar.expanded img {
+        padding-bottom: 10%;
+    }
+
+    .navbar.expanded .pink_button {
+        background-color: var(--pink);
+    }
+
+    /* Make the navbar flex-column when expanded */
+    .navbar.expanded {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+     /* Adjust menu-icon placement for mobile view when expanded */
+    .navbar.expanded .nav-bar-menu-icon {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        padding: 5px;
+        border-radius: 5px;
+    }
+
+    /* Adjust search bar placement for mobile view when expanded */
+    .navbar.expanded .nav-bar-search-container {
+        margin-left: 0;
+        margin-top: 20px;
+        width: 100%;
+    }
+
+     /* Adjust search bar (input) for mobile view when expanded */
+    .navbar.expanded .nav-bar-search-container input[type="text"] {
+        width: 90%;
+    }
+
+    /* Ensure the icons align properly in expanded view */
+    .navbar.expanded .nav-bar-icons {
+        margin-top: 10px;
+        
+        justify-content: flex-start;
+    }
+    
+}
+
+
+.dropdown {
+    display: none; /* Standaard verberg de dropdown */
+    position: absolute;
+    background-color: white; /* Achtergrondkleur */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 100;
+    min-width: 100px; /* Pas de breedte aan naar wens */
+    border-radius: 5px; /* Afgeronde hoeken */
+    opacity: 0; /* Begin met onzichtbaar */
+    display: none; /* Of 'none', afhankelijk van de status */
+}
+
+.dropdown.show {
+    display: block; /* Toegepast als de dropdown zichtbaar is */
+    opacity: 1; /* Maak het zichtbaar */
+    border-radius: 5px; /* Afgeronde hoeken */
+}
+
+/* Styling voor de dropdown links */
+.dropdown a {
+    display: block;
+    padding: 8px 16px;
+    color: var(--antracite);
+    text-decoration: none;
+    margin-right: 0px;
+    background-color: var(--white);
+    border-radius: 5px; /* Afgeronde hoeken */
+}
+
+.dropdown a:hover {
+    color: var(--white);
+}
+
+/* Media query voor kleinere schermen (mobiel) */
+@media screen and (max-width: 1200px) {
+    .dropdown {
+        display: none; /* Zorg ervoor dat de dropdown verborgen is */
+        opacity: 0; /* Zorg ervoor dat de dropdown niet zichtbaar is */
+    }
+}

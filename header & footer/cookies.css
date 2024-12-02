@@ -1,0 +1,255 @@
+:root {
+    --white: #ffffff;
+    --black: #000000;
+    --green: #7ded89;
+    --sub_antracite: #60625f;
+    --par_antracite: #60625f;
+    --light_gray: #edebea;
+    --light_blue: #42bedd;
+    --dark_blue: #2f7193;
+    --pink: #EB6363;
+}
+
+.cookie-wrapper {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Cookie consent banner */
+.cookie-wrapper {
+    position: fixed;
+    bottom: 0px;
+    left: -375px;
+    max-width: 345px;
+    width: 100%;
+    background-color: var(--light_gray);
+    border-radius: 8px;
+    padding: 15px 25px 22px;
+    transition: left 1.5s ease;
+    z-index: 3000;
+}
+
+.cookie-wrapper.show {
+    left: 0px;
+    bottom: 0px;
+}
+
+.cookie-wrapper .cookiesheader {
+    display: flex;
+    align-items: center;
+    column-gap: 15px;
+}
+
+.cookiesheader i {
+    color: var(--light_blue);
+    font-size: 32px;
+}
+
+.cookiesheader h2 {
+    color: var(--black);
+    font-weight: 500;
+}
+
+.cookie-wrapper .cookie-data {
+    margin-top: 16px;
+}
+
+.cookie-wrapper .cookie-data p {
+    color: var(--sub_antracite);
+    font-size: 16px;
+}
+
+.cookie-data p a {
+    color: var(--dark_blue);
+    text-decoration: none;
+}
+
+.cookie-data p a:hover {
+    color: var(--dark_blue);
+    text-decoration: underline;
+}
+
+.cookie-wrapper .cookie-buttons {
+    margin-top: 16px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cookie-buttons .accept-button,
+.cookie-buttons .info-settings-button {
+    width: calc(100% / 2 - 10px);
+    padding: 8px 0;
+    border-radius: 8px;
+    border: 0px;
+    font-weight: bolder;
+    color: var(--white);
+}
+
+.cookie-buttons .accept-button {
+    background-color: var(--light_blue);
+}
+
+.cookie-buttons .info-settings-button {
+    background-color: var(--sub_antracite);
+}
+
+.cookie-buttons .accept-button:hover {
+    background-color: var(--dark_blue);
+    transition: all 0.2s ease;
+}
+
+.cookie-buttons .info-settings-button:hover {
+    background-color: var(--black);
+    transition: all 0.2s ease;
+}
+
+/* Popup styles */
+.popup-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.popup-box {
+    background-color: #f2f2f2; /* Grijze achtergrond */
+    padding: 30px; /* Meer padding voor ruimtelijkheid */
+    border-radius: 8px;
+    max-width: 600px; /* Groter popup venster */
+    width: 100%;
+    position: relative;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Lichte schaduw voor diepte */
+}
+
+.popup-box h3 {
+    margin-bottom: 15px;
+    font-size: 24px;
+    color: #333;
+}
+
+.popup-box p {
+    margin-bottom: 20px;
+    font-size: 16px;
+    color: #666;
+    line-height: 1.6; /* Verbeterde tekstafstand */
+}
+
+.popup-options {
+    display: flex;
+    flex-direction: column;
+    gap: 30px; /* Grotere ruimte tussen de opties */
+}
+
+.option {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px; /* Ruimte tussen de knop en de tekst */
+}
+
+.popup-btn {
+    background-color: #42bedd;
+    color: white;
+    border: none;
+    padding: 15px 20px;
+    cursor: pointer;
+    border-radius: 8px; /* Rondere knoppen */
+    min-width: 220px; /* Consistente breedte voor de knoppen */
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.option p {
+    flex-grow: 1;
+    margin: 0;
+    font-size: 14px;
+    color: #333;
+}
+
+.close-popup {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    cursor: pointer;
+    font-size: 28px;
+    color: #999;
+}
+
+.popup-box a {
+    color: #42bedd;
+    text-decoration: none;
+}
+
+.popup-box a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 600px){
+    .popup-box {
+        padding: 10px; /* Nog minder padding */
+        max-width: 90%; /* Popup breedte is 90% van het scherm */
+    }
+}
+
+/* Basisstijl voor smartphones (kleiner dan 480px) */
+@media (max-width: 480px) {
+    /* Popup box styling voor smartphones */
+    .popup-box {
+        padding: 10px; /* Nog minder padding */
+        max-width: 90%; /* Popup breedte is 90% van het scherm */
+    }
+
+    .popup-box h3 {
+        font-size: 16px; /* Kleinere koptekst */
+        margin-bottom: 5px; /* Minder ruimte onder de koptekst */
+    }
+
+    .popup-box p {
+        font-size: 12px; /* Kleinere tekstgrootte */
+        line-height: 1.3; /* Minder regelafstand */
+        margin-bottom: 10px; /* Minder ruimte onder de tekst */
+    }
+
+    .popup-options {
+        gap: 10px; /* Nog minder ruimte tussen opties */
+    }
+
+    .popup-btn {
+        min-width: 100%; /* Knoppen gebruiken 100% van de breedte */
+        padding: 8px 5px; /* Minder padding voor knoppen */
+        font-size: 12px; /* Kleinere tekst in knoppen */
+    }
+
+    .option {
+        flex-direction: column; /* Stapel knoppen en tekst verticaal */
+        gap: 5px; /* Verminder ruimte tussen knop en tekst */
+    }
+
+    .option p {
+        text-align: center; /* Centreer de tekst voor betere leesbaarheid */
+    }
+
+    /* Knoppen in de cookie-banner aanpassen */
+    .cookie-buttons .accept-button,
+    .cookie-buttons .info-settings-button {
+        width: 95%; /* Knoppen gebruiken 95% van de breedte */
+        margin: 0 auto; /* Centreer de knoppen */
+        padding: 8px; /* Verminder padding */
+        font-size: 14px; /* Kleinere tekst */
+    }
+
+    /* Kleinere tekst in de cookie-banner */
+    .cookie-wrapper .cookie-data p {
+        font-size: 12px; /* Kleinere tekst in de cookie-banner */
+    }
+}

@@ -1,0 +1,331 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevents horizontal scrolling */
+}
+
+footer {
+    background-color: var(--light_blue);
+    color: var(--white);
+    padding: 5px;
+    font-family: Arial, sans-serif;
+    text-align: center; /* Centers text in the footer */
+    position: relative; /* Keeps the footer in the normal document flow */
+    width: 100%; /* Full width of the page */
+}
+
+
+
+.contact, .start-using, .customers {
+    margin: 0;
+    padding: 0;
+    text-align: left; /* Aligns text to the left */
+}
+
+.start-using p:last-child {
+    margin-bottom: 20px; /* Adds space between the last paragraph and the next section */
+}
+
+.customers {
+    order: 2; /* Sets the order of the customers section */
+    margin-left: 0; /* Resets left margin */
+    margin: 0;
+}
+
+.contact, .start-using {
+    flex-grow: 0; /* Prevents these sections from growing */
+    flex-shrink: 1; /* Allows these sections to shrink if needed */
+}
+
+.footer-container {
+    display: flex; /* Uses flexbox for layout */
+    padding: 0 10px; /* Adds padding on left and right */
+}
+
+.left-side {
+    text-align: left; /* Aligns text and content to the left */
+}
+
+.right-side {
+    text-align: right; /* Aligns text and content to the right */
+    margin-left: auto; /* Pushes this section to the right side */
+}
+
+footer h3, footer p {
+    margin: 5px 0; /* Adds vertical margin */
+    margin-left: 10px; /* Adds left margin */
+}
+
+footer h3 {
+    font-size: 14px; /* Sets the font size for headings */
+    margin-bottom: 5px; /* Adds space below headings */
+}
+
+footer p, a {
+    font-size: 10px; /* Sets the font size for paragraphs and links */
+    margin-bottom: 0; /* Removes bottom margin */
+}
+
+footer a {
+    color: var(--white); /* Sets link color */
+    text-decoration: none; /* Removes underline from links */
+}
+
+.footer-search-container {
+    display: flex;
+    flex-direction: column; /* Arranges items in a column */
+    align-items: flex-start; /* Aligns items to the start of the container */
+    margin-left: 20px; /* Adds left margin */
+    margin-top: 15px; /* Adds top margin */
+}
+
+.search-input {
+    padding: 5px; /* Adds padding inside the input */
+    margin-bottom: 10px; /* Adds space below the input */
+    border-radius: 5px; /* Rounds the corners */
+    border: 1px solid var(--light_gray); /* Adds border with light gray color */
+}
+
+.language-flags img {
+    width: 25px; /* Sets width for language flags */
+    height: auto; /* Maintains aspect ratio */
+}
+
+.language-flags-container {
+    display: flex; /* Uses flexbox for layout */
+    justify-content: flex-start; /* Aligns flags to the left */
+    align-items: center; /* Centers flags vertically */
+    margin-top: 10px; /* Adds top margin */
+}
+
+.language-flags {
+    display: flex; /* Uses flexbox for layout */
+    flex-direction: row; /* Aligns flags horizontally */
+    align-items: center; /* Centers flags vertically */
+    gap: 5px; /* Adds space between flags */
+}
+
+.partner-logos img {
+    max-height: 70px; /* Limits the maximum height of partner logos */
+    margin-left: 40px; /* Adds left margin */
+}
+
+.partner-logos {
+    display: flex; /* Uses flexbox for layout */
+    justify-content: flex-end; /* Aligns logos to the right */
+    margin: 0; /* Resets margins */
+    padding: 0; /* Resets padding */
+    text-align: right; /* Aligns text to the right */
+}
+
+.footer-bottom {
+    display: flex; /* Uses flexbox for layout */
+    justify-content: space-between; /* Distributes space between items */
+    align-items: center; /* Centers items vertically */
+    padding: 5px 10px; /* Adds padding */
+    margin-bottom: 5px;
+}
+
+.privacy-btn {
+    background-color: var(--pink); /* Sets background color */
+    border: none; /* Removes border */
+    padding: 8px 15px; /* Adds padding */
+    color: var(--white); /* Sets text color */
+    border-radius: 5px; /* Rounds the corners */
+    cursor: pointer; /* Shows pointer cursor on hover */
+}
+
+.social-icons{
+    margin-right: 25px;
+}
+
+.social-icons a img {
+    width: 25px; /* Sets width for social media icons */
+    margin-left: 10px; /* Adds left margin */
+}
+
+.contact, .start-using, .customers {
+    margin: 5px; /* Adds margin */
+    padding: 0; /* Resets padding */
+}
+
+.contact {
+    flex: 1; /* Allows this section to grow and fill available space */
+}
+
+.footer-container .collom {
+    display: flex; /* Uses flexbox for layout */
+    flex-direction: column; /* Arranges items in a column */
+    align-items: flex-start; /* Aligns items to the start of the container */
+}
+
+.footer-bottom div {
+    display: flex; /* Uses flexbox for layout */
+}
+
+.sgf_logo {
+    max-width: 30%; /* Limits maximum width */
+    max-height: 30%; /* Limits maximum height */
+    margin-right: 20px; /* Adds right margin */
+}
+
+.itco_logo {
+    max-width: 70%; /* Limits maximum width */
+    max-height: 30%; /* Limits maximum height */
+    margin-right: 60px; /* Adds right margin */
+    margin-bottom: -5px; /* Adjusts bottom margin */
+    margin-top: 20px; /* Adds top margin */
+}
+
+.microsoft_logo {
+    max-width: 100%; /* Limits maximum width */
+    max-height: 50%; /* Limits maximum height */
+    margin-bottom: 10px; /* Adds bottom margin */
+}
+
+.partner-logos {
+    display: flex; /* Uses flexbox for layout */
+    flex-direction: column; /* Aligns logos vertically */
+    align-items: center; /* Centers logos */
+    margin: 0; /* Resets margins */
+    padding: 0; /* Resets padding */
+}
+
+.terms_bottom {
+    margin-left: 0; /* Resets left margin */
+    padding-left: 20px; /* Adds left padding */
+    margin-right: auto; /* Pushes section to the left */
+}
+
+footer hr {
+    width: 100%; /* Full width */
+    height: 1px; /* Sets height */
+    margin: 3px 0; /* Adds vertical margin */
+    border: none; /* Removes border */
+    border-top: 2px solid var(--dark_blue); /* Adds top border */
+    margin-top: 30px; /* Adds top margin */
+}
+
+footer, .footer-container {
+    padding: 0; /* Resets padding */
+    margin: 0; /* Resets margin */
+    width: 100vw; /* Full viewport width */
+}
+
+.footer_logo img {
+    display: flex; /* Uses flexbox for layout */
+    justify-content: flex-start; /* Aligns logo to the start */
+    align-items: center; /* Centers logo vertically */
+    padding: 0; /* Resets padding */
+    margin: 0; /* Resets margin */
+    width: 230px; /* Sets width */
+    margin-top: 10px; /* Adds top margin */
+    margin-bottom: 10px; /* Adds bottom margin */
+    margin-left: 8px; /* Adds left margin */
+}
+
+.img-about-us img {
+    width: 350px; /* Sets width */
+    height: 170px; /* Sets height */
+    margin-right: 70px; /* Adds right margin */
+    border-radius: 3%; /* Rounds corners */
+    margin-top: 10px; /* Adds top margin */
+    margin-left: 42px;
+}
+
+.footer-logo-container {
+    display: flex; /* Uses flexbox for layout */
+    flex: 1; /* Allows container to grow */
+    justify-content: flex-end; /* Aligns logos to the right */
+}
+
+.logo-row {
+    display: flex; /* Uses flexbox for layout */
+    flex-direction: row; /* Aligns logos horizontally */
+    align-items: center; /* Centers logos vertically */
+    margin-bottom: 10px; /* Adds bottom margin */
+}
+
+/* Media queries for smaller screens */
+@media (max-width: 1300px) {
+    .footer-container {
+        flex-direction: column; /* Stacks items vertically */
+    }
+
+    .partner-logos {
+        flex-direction: column; /* Stacks logos vertically */
+        align-items: center; /* Centers logos */
+        text-align: center; /* Centers text */
+    }
+
+    .contact, .start-using, .customers {
+        text-align: center; /* Centers text */
+    }
+
+    .footer-bottom {
+        flex-direction: column; /* Stacks items vertically */
+        text-align: center; /* Centers text */
+        margin-bottom: 15px;
+    }
+
+    .logo-row {
+        flex-direction: column; /* Stacks logos vertically */
+    }
+
+    .partner-logos img {
+        max-height: 50px; /* Limits maximum height */
+        margin-bottom: 10px; /* Adds bottom margin */
+    }
+
+    .footer-search-container {
+        display: flex; /* Uses flexbox for layout */
+        justify-content: center; /* Centers container horizontally */
+        align-items: center; /* Centers container vertically */
+        margin-left: auto; /* Centers container horizontally */
+        margin-right: auto; /* Centers container horizontally */
+    }
+
+    .img-about-us {
+        display: flex; /* Uses flexbox for layout */
+        justify-content: center; /* Centers container horizontally */
+        align-items: center; /* Centers container vertically */
+        width: 100%; /* Full width */
+    }
+
+    .img-about-us img {
+        width: 100%; /* Full width */
+        max-width: 250px; /* Limits maximum width */
+        height: auto; /* Maintains aspect ratio */
+    }
+
+    .right-side {
+        display: flex; /* Uses flexbox for layout */
+        justify-content: center; /* Centers container horizontally */
+        align-items: center; /* Centers container vertically */
+        flex-direction: column; /* Stacks items vertically */
+        margin: 0 auto; /* Centers container horizontally */
+        padding: 20px; /* Adds padding */
+        width: 100%; /* Full width */
+        text-align: center; /* Centers text */
+    }
+
+    .footer_logo {
+        display: flex; /* Uses flexbox for layout */
+        justify-content: center; /* Centers container horizontally */
+        align-items: center; /* Centers container vertically */
+        width: 100%; /* Full width */
+        padding: 10px 0; /* Adds padding */
+    }
+
+    .privacy-btn {
+        margin-top: 10px; /* Adds top margin */
+    }
+
+    .terms_bottom {
+        display: flex; /* Uses flexbox for layout */
+        align-items: center; /* Centers items vertically */
+        justify-content: center; /* Centers items horizontally */
+        width: 100%; /* Full width */
+        padding: 10px 0; /* Adds padding */
+    }
+}

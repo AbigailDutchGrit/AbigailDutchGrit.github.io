@@ -1,0 +1,138 @@
+Pseudocode HTML:
+
+Begin van een html document:
+de taal is engels 
+de UTF-08
+viewport zodat het responsief wordt
+een favicon
+link voor google icons en stylesheet
+link naar favicon 
+JavaScript bestand voor cookies
+boxicons voor extra pictogrammen
+titel van de pagina
+
+Body
+Algemene structuur: Bevat alle secties van de pagina.
+
+Header
+Navigatiebar:
+Logo: Klikbaar en leidt naar de startpagina.
+Menu-icoon: Voor mobiele weergave om het menu te openen.
+Navigatielinks: Links naar verschillende pagina’s:
+Home
+Store
+Implementation
+About Us
+Contact
+Zoekbalk: Voor het zoeken naar content op de site.
+Gebruikers- en winkelwagenicoontjes:
+Voor inloggen
+Voor toegang tot de winkelmand
+JavaScript: Voor het functioneren van de navigatie en winkelwagenfunctionaliteit.
+
+Main (Hoofdgedeelte van de pagina)
+Inhoud Wrapper: Container voor alle inhoud op de pagina.
+Sectie voor Algemene Voorwaarden:
+Titels:
+"Terms & Conditions"
+"Data Processing Agreements"
+Links: Naar verschillende documenten in PDF-formaat, beschikbaar in meerdere talen:
+Nederlands
+Engels
+Spaans
+Duits
+
+Begin van de footer
+logo en links 
+logo met link naar de homepagina
+contact
+email en telefoonnummer
+adres en informatie
+titel 
+linkjes naar verschillende pagina's 
+titel van Customers
+linkjes voor de login, support en privacy instellingen
+afbeelding van het team 
+zoekbalk
+vlaggen voor verschillende talen 
+en de partnerlogo's
+
+einde Footer-inhoud
+
+Onderkant van de footer
+knop voor privacy instellingen
+copyright en links naar voorwaarden en de sitemap
+sociale media iconen
+einde Footer-onderkant
+
+knop om naar boven te scrollen
+icoon om naar boven te scrollen
+
+einde body 
+
+einde HTML-document
+
+--------------------------------------------------------------------------------------------------------------------------------
+
+Pseudocode CSS:
+
+Stijl voor de kleuren:
+DEFINIEER KLEUREN:
+WIT = #ffffff
+ZWART = #000000
+GROEN = #7ded89
+ROOD = #ff002f
+ANTRACIET = #60625f
+LICHT_GRijs = #edebea
+LICHT_BLAUW = #42bedd
+DONKER_BLAUW = #2f7193
+
+Body Styling
+Lettertype: Arial, sans-serif
+Tekstkleur: Zwart
+Marges en padding: Geen
+
+Main Styling
+Links (a) binnen een paragraaf (p):
+Lettergrootte: 30px
+Kleur: Lichtblauw
+Opmaak: Vetgedrukt, geen onderstreping
+Titel (h3) binnen het main-element:
+Lettergrootte: 45px
+Kleur: Donkerblauw
+Opmaak: Vetgedrukt, geen onderstreping
+Hoofdelement (main):
+Padding: 50px
+Hoofdtitel (h1) binnen het main-element:
+Lettergrootte: 40px
+Kleur: Donkerblauw
+Opmaak: Vetgedrukt, gecentreerd
+
+Background (bg Class)
+Achtergrondkleur: Lichtgrijs
+Padding aan de zijkanten: 50px
+Border-radius: 30px (ronde hoeken)
+Padding boven: 20px, onder: 40px
+
+Responsive Design (Media-query voor max-breedte 880px)
+Links (a) binnen een paragraaf (p):
+Lettergrootte: 20px
+Kleur: Lichtblauw
+Opmaak: Vetgedrukt, geen onderstreping
+Titel (h3) binnen het main-element:
+Lettergrootte: 30px
+Kleur: Donkerblauw
+Opmaak: Vetgedrukt, geen onderstreping
+Hoofdelement (main):
+Padding: Blijft 50px
+Hoofdtitel (h1) binnen het main-element:
+Lettergrootte: 30px
+Kleur: Donkerblauw
+Opmaak: Vetgedrukt, gecentreerd
+Extra marge onderaan: 40px
+Voor de achtergrond (bg Class):
+Flex-container: Automatisch aanpassen
+Flexrichting: Kolom (stacking)
+Tekst: Centreren
+
+einde van de css

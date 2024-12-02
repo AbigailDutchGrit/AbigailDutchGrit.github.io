@@ -1,0 +1,139 @@
+Pseudocode HTML:
+
+Begin van een html document:
+de taal is engels 
+de UTF-08
+viewport zodat het responsief wordt
+een favicon
+link voor google icons en stylesheet
+link naar favicon 
+JavaScript bestand voor cookies
+boxicons voor extra pictogrammen
+titel van de pagina
+
+header van het html document:
+
+Navigation Bar:
+navigatiebalk met het logo die naar home pagina leidt
+
+main content van de pagina:
+ga terug knop:
+knop om terug te gaan naar de winkel
+de knop bevat een icoon van google icons
+
+progressie bar:
+stap 1: adres (met vinkje)
+stap 2: verzoek (met vinkje)
+stap 3: mislukt (met vinkje)
+elke stap heeft een label en een icoon om de status te zoekinvoer
+
+bestelling niet gelukt bericht:
+een bericht dat de bestelling is mislukt en het opnieuw te proberen 
+een icoon van google om de mislukte status weer te geven 
+
+Begin van de footer
+logo en links 
+logo met link naar de homepagina
+contact
+email en telefoonnummer
+adres en informatie
+titel 
+linkjes naar verschillende pagina's 
+titel van Customers
+linkjes voor de login, support en privacy instellingen
+afbeelding van het team 
+zoekbalk
+vlaggen voor verschillende talen 
+en de partnerlogo's
+
+einde Footer-inhoud
+
+Onderkant van de footer
+knop voor privacy instellingen
+copyright en links naar voorwaarden en de sitemap
+sociale media iconen
+einde Footer-onderkant
+
+knop om naar boven te scrollen
+icoon om naar boven te scrollen
+
+einde body 
+
+einde HTML-document
+
+------------------------------------------------------------------------------------------------------------------------------
+
+JavaScript:
+
+In dit document is geen specifiek JavaScript gespecificeerd, maar de functionaliteit voor navigatie wordt uitgevoerd door de onclick-attributen voor de knoppen.
+
+einde van JavaScript
+------------------------------------------------------------------------------------------------------------------------------
+
+Pseudocode CSS:
+
+Stijl voor de kleuren:
+DEFINIEER KLEUREN:
+WIT = #ffffff
+ZWART = #000000
+GROEN = #7ded89
+ROOD = #ff002f
+ANTRACIET = #60625f
+LICHT_GRijs = #edebea
+LICHT_BLAUW = #42bedd
+DONKER_BLAUW = #2f7193
+
+algemene stijl:
+margins en padding op 1 
+algemene lettertype is Arial of een standaard sans-serif
+achtergrondkleur is wit 
+body en html een hoogte van 100%
+
+container met informatie:
+flexbox om horizontaal te centreren
+maximale breedte tot 1200px en padding van 20px
+ruimte tussen de elementen 
+flex wrap om op kleinere schermen te tonen
+
+checkmark knop stijl:
+roze achtergrond, geen rand en ronde hoeken van 7px
+tekst is wit en 20px
+een hover effect met een overgang 
+de knop heeft een marge van 40px aan de bovenkant 
+de tekst is klikbaar en geen onderstreepte stijl 
+
+progressiebar stijl:
+flexbox om het gelijk te verdelen 
+elke stap is gecentreerd over de balk 
+de stap cirkels zijn 30px groot met gecentreerde tekst 
+actieve stappen zijn roze 
+elke stap heeft een label 
+een lijn russen de stappen die actiev roze is en inactiev wit 
+
+navbar stijl: 
+flexbox
+lichtblauw als de achtergrondkleur en donkerblauw rand 
+het logo heeft geen margins en is 50px hoog
+de wrapper moet de beschikbare ruimte geven 
+
+ga terug knop:
+een roze knop met witte tekst 
+een icoon aan de linkerkant met 15px ruimte ertussen 
+een hover effect met een vloeiende overgang 
+
+gecentreerde doos stijl: 
+de box neemt 50% in beslag en heeft 100px padding
+een witte achtergrond, grijze rand en ronde hoeken met een lichte schaduw 
+de tekst is gecentreerd, zwart en een font van 18px
+grote checkmark is 150px en een rode kleur 
+
+order niet geplaatst tekst:
+tekstgrootte van 25px en een zwarte kleur 
+tekst is gecentreerd en een marge van 50px aan de bovenkant 
+
+media queries voor kleine schermen:
+minder padding van de box
+marges zijn anders 
+de checkmark is verkleind naar 100px
+
+einde van css 

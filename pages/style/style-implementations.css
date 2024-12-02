@@ -1,0 +1,138 @@
+:root {
+    --white: #ffffff;
+    --black: #000000;
+    --green: #7ded89;
+    --red: #ff002f;
+    --antracite: #60625f;
+    --light_gray: #edebea;
+    --light_blue: #42bedd;
+    --dark_blue: #2f7193;
+}
+
+
+.implementations_text {
+    color: var(--dark_blue);
+    font-size: 3em; /* Grootte voor de hoofdtekst */
+    margin-bottom: 10px;
+}
+
+.implementations_subtext {
+    color: var(--light_blue);
+    font-size: 2.2rem; /* Middelgrote tekst */
+    margin-bottom: 10px;
+}
+
+.implementations_description {
+    color: var(--antracite);
+    font-size: 1.5rem; /* Kleinere tekst */
+    margin-bottom: 20px;
+}
+
+.implementations_container {
+    display: flex;
+    justify-content: space-between; /* Zorgt ervoor dat de elementen aan de uiteinden staan */
+    align-items: flex-start; /* Zorgt ervoor dat de elementen bovenaan zijn uitgelijnd */
+    padding: 70px; /* Voeg padding toe voor ruimte */
+}
+
+.implementations_text_container {
+    margin-left: 90px;
+    flex: 1; /* Zorgt ervoor dat deze container ruimte gebruikt */
+    max-width: 60%; /* Beperk de breedte voor betere leesbaarheid */
+}
+
+.implementations_image_container {
+    margin-right: 90px;
+    flex: 1; /* Zorgt ervoor dat deze container ook ruimte gebruikt */
+    display: flex;
+    flex-direction: column; /* Zorgt ervoor dat de afbeelding en knop onder elkaar staan */
+    align-items: flex-end; /* Zorgt ervoor dat de afbeelding en knop rechts zijn uitgelijnd */
+}
+
+.implementations-image {
+    width: 100%; /* Zorgt ervoor dat de afbeelding responsief is */
+    max-width: 350px; /* Beperk de maximale breedte van de afbeelding */
+    height: auto; /* Houdt de verhouding van de afbeelding */
+    margin-bottom: 60px; /* Voeg ruimte toe onder de afbeelding */
+}
+
+.pink_button {
+    font-weight: bold;
+    font-size: 25px;
+    margin-right: 60px;
+    background-color: var(--pink);
+    color: white; /* Tekstkleur van de knop */
+    border: none; /* Geen rand */
+    border-radius: 5px; /* Hoekradius */
+    padding: 15px 30px; /* Padding voor de knop */
+    text-decoration: none; /* Geen onderstreping */
+    transition: background-color 0.3s ease;
+}
+
+.pink_button:hover {
+    background-color: #d15454;
+}
+
+.flowchart_container {
+    display: flex;
+    justify-content: center; /* Zorgt ervoor dat de afbeelding horizontaal gecentreerd is */
+    margin-top: 40px; /* Voeg wat ruimte boven de afbeelding toe */
+}
+
+.flowchart-image {
+    padding: 100px;
+    margin-right: 50px;
+    margin-left: 50px;
+    width: 100%; /* Zorgt ervoor dat de afbeelding 100% van de beschikbare breedte inneemt */
+    max-width: 1500px; /* Limiteert de maximale breedte van de afbeelding */
+    height: auto; /* Houdt de hoogte in verhouding */
+    object-fit: contain; /* Zorgt ervoor dat de afbeelding volledig zichtbaar blijft */
+}
+
+@media (max-width: 1200px) {
+    /* Zorgt ervoor dat de implementatiecontainer in een kolom wordt geplaatst en tekst gecentreerd is */
+    .implementations_container {
+        flex-direction: column;
+        text-align: center; /* Zorgt ervoor dat de tekst in het midden wordt uitgelijnd */
+        align-items: center; /* Zorgt ervoor dat de containers horizontaal gecentreerd worden */
+    }
+
+    .implementations_text_container {
+        margin-top: -30px;
+        margin-left: 0px;
+        flex: 1; /* Zorgt ervoor dat deze container ruimte gebruikt */
+        max-width: 80%; /* Beperk de breedte voor betere leesbaarheid op kleine schermen */
+        margin-bottom: 20px; /* Voeg wat ruimte toe onder de tekstcontainer */
+    }
+    
+    
+    .implementations_image_container {
+        margin-right: 0px;
+        flex: 1; /* Zorgt ervoor dat deze container ook ruimte gebruikt */
+        display: flex;
+        flex-direction: column; /* Zorgt ervoor dat de afbeelding en knop onder elkaar staan */
+        align-items: center; /* Zorgt ervoor dat de afbeelding en knop gecentreerd zijn */
+    }
+
+    .pink_button{
+        margin-right: auto;
+    }
+}
+
+@media (max-width: 800px){
+    .flowchart_container{
+        display: none;
+    }
+    
+    .implementations_text {
+        color: var(--dark_blue);
+        font-size: 1.5em; /* Grootte voor de hoofdtekst */
+        margin-bottom: 10px;
+    }
+
+    .implementations_subtext {
+        color: var(--light_blue);
+        font-size: 1rem; /* Middelgrote tekst */
+        margin-bottom: 10px;
+    }
+}

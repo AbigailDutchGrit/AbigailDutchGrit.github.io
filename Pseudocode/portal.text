@@ -1,0 +1,108 @@
+Begin van een html document:
+de taal is engels 
+de UTF-08
+viewport zodat het responsief wordt
+een favicon
+link voor google icons en stylesheet
+link naar favicon 
+JavaScript bestand voor cookies
+boxicons voor extra pictogrammen
+titel van de pagina
+
+navbar:
+logo met link naar home pagina
+mobiele menuicoon
+linkjes naar de andere pagina's 
+zoekbalk
+login icoon en winkelwagen pagina 
+javascript 
+
+main:
+portaal header 
+achtergrondafbeelding
+overlay donker effect 
+welkomstbericht
+
+bestellingtabelsectie:
+tabelstructuur met bestelnummer, datum, status, totaal, acties
+
+voor elke bestelling:
+bestelnummer
+besteldatum
+bestelstatus met kleur
+totaalbedrag en artikelen
+weergave actieknop
+
+Begin van de footer
+logo en links 
+logo met link naar de homepagina
+contact
+email en telefoonnummer
+adres en informatie
+titel 
+linkjes naar verschillende pagina's 
+titel van Customers
+linkjes voor de login, support en privacy instellingen
+afbeelding van het team 
+zoekbalk
+vlaggen voor verschillende talen 
+en de partnerlogo's
+
+einde Footer-inhoud
+
+Onderkant van de footer
+knop voor privacy instellingen
+copyright en links naar voorwaarden en de sitemap
+sociale media iconen
+einde Footer-onderkant
+
+knop om naar boven te scrollen
+icoon om naar boven te scrollen
+
+einde body 
+
+einde HTML-document
+
+-----------------------------------------------------------------------------------------------------------------------------------------
+
+Pseudocode CSS:
+
+Stijl voor de kleuren:
+DEFINIEER KLEUREN:
+WIT = #ffffff
+ZWART = #000000
+GROEN = #7ded89
+ROOD = #ff002f
+ANTRACIET = #60625f
+LICHT_GRijs = #edebea
+LICHT_BLAUW = #42bedd
+DONKER_BLAUW = #2f7193
+
+
+style header:
+achtergrondkleur, rand, padding en schaduw 
+
+style koptekst en knop:
+hover effect voor knoppen
+
+bestellingstabel stijl:
+afmetingen
+padding
+achtergrondkleur
+
+tabelstructuur stijl:
+padding en tekstuitlijning voor tabelkoppen en cellen 
+kleur en onderrand
+tabelrijen
+statuskleuren
+
+linkknoppen binnen tabel:
+hover effect voor knoplinks
+
+media qeurie voor kleinere schermen: 
+aanpassen overlay, header en header doos 
+verbergen tabelkoppen op mobiel
+toevoegen cellabels voor mobiele weergave
+add media query voor responsiviteit
+
+eind css-document

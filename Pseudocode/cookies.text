@@ -1,0 +1,222 @@
+Pseudocode HTML:
+
+Begin van een html document:
+de taal is engels 
+de UTF-08
+viewport zodat het responsief wordt
+een favicon
+link voor google icons en stylesheet
+link naar favicon 
+JavaScript bestand voor cookies
+boxicons voor extra pictogrammen
+titel van de pagina
+
+begin van de body 
+een div met de klasse "cookie-wrapper"
+
+header
+weergeven van de cookie pictogram 
+weergeven van de titel "cookie consent"
+einde van de header
+
+div met de klasse "cookie-data"
+uitleg over het gebruik van cookies
+toevoegen link naar privacybeleid
+einde van de div met klasse "cookie-data"
+
+een div met de klasse "cookie-button"
+knop met de klasse klasse "accept-button" en ID "acceptBtn"
+weergeven tekst "accept"
+knop met de klasse "info-settings-button" en ID "infoBtn"
+weergeven tekst "info & settings"
+einde van de div
+einde van de div
+
+popup voor gedetailleerde cookie instellingen
+een div met de klasse klasse "popup-overlay" en ID "popupOverlay"
+een div met de klasse "popup-box" en ID "popupBox
+sluitknop met klasse "close-popup" en ID "closePopup"
+weergeven de tekst "x"
+weergeven titel "choose your cookie settings"
+uitleg over het verzamelen van persoonlijke gegevens 
+link naar privacyverklaring
+div met klasse "popup-options"
+div met klasse "option"
+knop met klasse "popup-btn" en ID "anonymousBtn"
+weergeven teskt "Anonymous browsing"
+weergeven uitleg over anoniem browsen
+einde van de div
+
+div met klasse "option"
+knop met klasse "popup-btn" en ID "fullFunctionBtn"
+weergeve van de teskt "Fully functioning website"
+uitleg over volledige functionaliteit
+eind div
+eind div
+eind div
+eind div
+
+Begin van de footer
+logo en links 
+logo met link naar de homepagina
+contact
+email en telefoonnummer
+adres en informatie
+titel 
+linkjes naar verschillende pagina's 
+titel van Customers
+linkjes voor de login, support en privacy instellingen
+afbeelding van het team 
+zoekbalk
+vlaggen voor verschillende talen 
+en de partnerlogo's
+
+einde Footer-inhoud
+
+Onderkant van de footer
+knop voor privacy instellingen
+copyright en links naar voorwaarden en de sitemap
+sociale media iconen
+einde Footer-onderkant
+
+knop om naar boven te scrollen
+icoon om naar boven te scrollen
+
+einde body 
+
+einde HTML-document
+
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Pseudocode CSS:
+
+stijl voor de kleuren:
+Wit
+Zwart
+Groen
+Lichtgrijs
+Donkerblauw
+Roze
+
+algemene sijl: 
+marge en padding op 0 
+lettertype is Arial 
+
+body stijl:
+minimale hoogte op 100vh
+
+cookie consent banner stijl:
+position is fixed
+linkerpositie -375px
+de hoeken zijn afgerond 
+achtergrondkleur is licht grijs 
+linkerpositie is op 0
+
+header stijl:
+weergave is flex 
+uitlijnen van de items in het midden 
+
+cookie knop stijl:
+weergave is flex
+justify content is gelijkmatig 
+
+stijl van de knoppen
+breedte en padding 
+rond hoeken af 
+kleur is wit
+
+stijl accept knop:
+achtergrondkleur licht blauw 
+
+info settings knop stijl:
+achtergrondkleur sub-antracties
+
+popup stijl:
+display niet 
+position is fixed, volledige schermgrootte
+achtergrondkleur is semi transparant
+
+pop up box stijl:
+achtergrondkleur 
+padding
+rondere hoeken 
+maximale breedte
+
+responsief stijl:
+padding en breedte zodra het scherm kleiner is 
+
+einde van de css
+
+--------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Pseudocode JAVASCRIPT: 
+
+
+BEGIN JavaScript
+
+elementen die in JavaScript gebruikt worden:
+SELECTEER cookieBox, acceptButton, infoButton, anonymousButton, fullFunctionButton, popupOverlay, closePopup
+
+Functie om popup te verbergen:
+FUNCTIE hidePopup 
+display is op none
+
+Functie om een cookie in te stellen:
+FUNCTIE setCookie (name, value, days) 
+ALS dagen gegeven zijn:
+STEL vervaldatum in
+STEL cookie in met naam, waarde en vervaldatum
+
+Functie om cookie-status te controleren:
+FUNCTIE getCookie (name) 
+ZOEK cookie in document.cookie
+ALS cookie gevonden is:
+RETOURNEER waarde
+
+
+Voer de hoofdlogica uit:
+FUNCTIE executeCodes 
+STEL cookieConsent in op de waarde van getCookie("cookieConsent")
+
+Toont de cookie-box als geen cookie is of als deze is geweigerd:
+ALS geen cookieConsent of cookieConsent is "weggedaan":
+TOON cookieBox
+
+Acceptatie knop:
+acceptButton.ADD_EVENT_LISTENER "click", 
+STEL cookie in op "geaccepteerd"
+VERBERG cookieBox
+    
+
+Info & settings knop:
+infoButton.ADD_EVENT_LISTENER "click", 
+STEL display van popupOverlay in op "flex"
+    
+
+Anonymous browsing knop:
+anonymousButton.ADD_EVENT_LISTENER "click", 
+STEL cookie in op "weggedaan"
+hidePopup()
+VERBERG cookieBox
+    
+
+Fully functioning website knop
+fullFunctionButton.ADD_EVENT_LISTENER "click", 
+STEL cookie in op "geaccepteerd"
+hidePopup()
+VERBERG cookieBox
+    
+
+Sluit popup bij kruisje:
+closePopup.ADD_EVENT_LISTENER "click", hidePopup
+
+Sluit popup bij klikken buiten de box:
+popupOverlay.ADD_EVENT_LISTENER "click", (e) => 
+ALS doel is popupOverlay:
+hidePopup()
+    
+Voer uit bij laden van de pagina:
+window.ADD_EVENT_LISTENER "load", executeCodes
+
+einde van de JavaScript

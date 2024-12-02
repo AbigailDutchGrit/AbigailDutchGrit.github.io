@@ -1,0 +1,158 @@
+START HTML-document
+
+BEGIN HTML-pagina
+Hoofddeel van de pagina
+BEGIN Hoofd
+Stel de taal in en geef aan dat het een webpagina is
+VOEG taal in (bijvoorbeeld Engels)
+
+Belangrijke informatie van de pagina 
+Icoon voor de browser
+Een titel van de pagina 
+einde van het hoofd gedeelte
+
+Begin van de inhoud van de pagina
+
+BEGIN Lichaam (body)
+
+Bovenkant van de pagina
+Navigatiemeu voor de pagina
+Logo dat naar de startpagina gaat
+Links naar verschillende pagina's zoals home, store enz
+de links voor de navigaie 
+een zoekbalk om te kunnen zoeken op de pagina 
+een icoon om in te loggen als klant 
+einde van de navigatie balk 
+
+Begin van de hoofdinhoud (main)
+
+Begin sectie voor de partners
+Een titel voor deze sectie 
+afbeeldingen voor de partners
+einde van de sectie voor de partners
+
+Sectie om meer informatie te vragen 
+Begin sectie call to action 
+een tekst met uitnodiging om meer te leren 
+een knop waar je op kan klikken met de tekst "leer meer"
+einde van de sectie call to action 
+
+Sectie voor carrières
+Een titel voor deze sectie 
+informatie over beschikbare banen 
+vacature informatie 
+een knop om de vacatures te kunnen bekijken 
+knop met tekst "bekijk alle vacatures"
+Einde van de sectie voor carrières
+
+Einde van de hoofdinhoud (main)
+
+Begin footer
+een logo en contactinformatie
+links naar verschillende sociale media
+de iconen voor de sociale media
+een zoekbalk om naar verschilende dingen te zoeken 
+einde van de footer
+
+Knop om naar boven te scrollen 
+icoon voor de knop 
+icoon is toegevoegd
+Einde knop om naar boven te scrollen
+
+Einde van de body 
+Einde van het html document
+
+-----------------------------------------------------------------------------------------------------------------------------------------------
+
+Pseudocode CSS:
+
+
+BEGIN STIJLEN
+
+De stijlen voor de kleuren:
+- Wit: #ffffff
+- Zwart: #000000
+- Groen: #7ded89
+- Antraciet: #60625f
+- Lichtgrijs: #edebea
+- Lichtblauw: #42bedd
+- Donkerblauw: #2f7193
+- Roze: #EB6363
+
+De algemene stijl voor de pagina:
+- Lettertype: Arial
+- Achtergrondkleur: Wit
+- Geen marges of opvulling
+- Kleur van tekst: Antraciet
+
+Stijl voor de koppen op de pagina:
+- Kleur: Donkerblauw
+- Centraal uitgelijnd
+- Onderaan wat ruimte
+
+Stijl voor de partner sectie:
+- Opvulling van 40px boven en onder, 20px aan de zijkanten
+- Achtergrondkleur: Wit
+- Centraal uitgelijnd
+
+Stijl voor de logo's:
+- Een flexibele opstelling
+- Logo's onder elkaar met 20px ruimte tussen
+
+De stijl voor de eerste rij logo's:
+- Logo's naast elkaar met ruimte tussen
+- Maximaal 600px breed
+
+Stijl voor de tweede rij logo's:
+- Logo's gecentreerd met ruimte tussen
+- Maximaal 400px breed
+
+Stijl voor de logo afbeeldingen:
+- Maximaal 150px breed
+- Maximaal 100px hoog
+- Wat ruimte eromheen
+- Ronde hoeken
+- Een lichte schaduw
+
+Stijl voor de knoppen: 
+- Achtergrondkleur: Roze
+- Witte tekst
+- Opvulling van 10px boven en onder, 20px aan de zijkanten
+- Geen rand
+- Ronde hoeken
+- Duidelijke cursor als je eroverheen beweegt
+
+Stijl voor de call to action: 
+- Flexibele opstelling
+- Gecentreerd met ruimte tussen
+- Achtergrondkleur: Donkerblauw
+- Witte tekst
+- Opvulling van 40px
+
+Stijl voor de vacature: 
+- Flexibele opstelling
+- Gecentreerd met 40px ruimte tussen de vacatures
+- Marge van 40px boven en onder
+
+Stijl voor de vacature afbeeldingen: 
+- 150px breed en hoog
+- Ronde hoeken
+- Wat ruimte eromheen
+
+// Responsieve aanpassingen voor verschillende schermformaten
+
+// Voor mobiele telefoons
+ALS het scherm kleiner is dan 750px:
+- Zet de CTA sectie onder elkaar
+- Maak de tekst kleiner
+- Maak de knoppen breder
+
+// Voor heel kleine schermen (bijvoorbeeld iPhone SE)
+ALS het scherm kleiner is dan 375px:
+- Maak de tekst nog kleiner
+- Verminder de opvulling van de CTA sectie
+
+// Voor grotere schermen (tot 1200px)
+ALS het scherm kleiner is dan 1200px:
+- Maak de ruimte tussen de elementen iets kleiner
+- Pas de tekstgrootte aan

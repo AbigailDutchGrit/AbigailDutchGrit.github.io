@@ -1,0 +1,571 @@
+:root {
+    --white: #ffffff;
+    --black: #000000;
+    --green: #7ded89;
+    --red: #ff002f;
+    --antracite: #60625f;
+    --light_gray: #edebea;
+    --light_blue: #42bedd;
+    --dark_blue: #2f7193;
+    --pink: #EB6363;
+}
+
+
+/* Sets the font family for the entire document to Arial and ensures the HTML element has full height. */
+html {
+    font-family: Arial, sans-serif;
+    height: 100%;
+}
+
+/* Styles the body with a white background, flex layout, and minimum height to fill the viewport. */
+body {
+    background-color: var(--white);
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+/* Styles the pink button with a specific background, padding, font size, and transition effects. */
+.pink_button {
+    background-color: var(--pink);
+    border: none;
+    border-radius: 7px;
+    padding: 20px 40px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    text-align: center;
+    display: inline-block;
+    text-decoration: none;
+    color: var(--white);
+    transition: background-color 0.3s ease;
+}
+
+/* Changes the background color of the pink button on hover for a visual effect. */
+.pink_button:hover {
+    background-color: #d15454;
+}
+
+
+/* Styles the carousel container with relative positioning, hidden overflow, and a maximum width. */
+.home-carousel-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: var(--dark_blue);
+}
+
+/* Styles the carousel track as a flex container with smooth transitions for movement. */
+.home-carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+}
+
+/* Sets a minimum width for the carousel slides and prevents them from shrinking. */
+.home-carousel-slide {
+    min-width: 250px;
+    flex-shrink: 0;
+}
+
+/* Styles the images in the carousel slides with specific dimensions, rounded corners, and cover fitting. */
+.home-carousel-slide img {
+    width: 250px;
+    height: 90px;
+    border-radius: 20px;
+    object-fit: cover;
+    margin: 15px;
+}
+
+/* Styles the gradient overlays on both sides of the carousel container with fixed width and full height. */
+.home-carousel-container::before,
+.home-carousel-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 100px;
+    height: 100%;
+    z-index: 5;
+    pointer-events: none;
+}
+
+/* Adds a gradient overlay to the left side of the carousel container for visual effect. */
+.home-carousel-container::before {
+    left: 0;
+    background: linear-gradient(to right, var(--dark_blue), transparent);
+}
+
+/* Adds a gradient overlay to the right side of the carousel container for visual effect. */
+.home-carousel-container::after {
+    right: 0;
+    background: linear-gradient(to left, var(--dark_blue), transparent);
+}
+
+/* Styles the carousel buttons with absolute positioning, rounded shape, and transparent background. */
+.home-carousel-button {
+    position: absolute;
+    transform: translateY(-50%);
+    border: none;
+    cursor: pointer;
+    z-index: 10;
+    padding: 10px;
+    border-radius: 50%;
+    margin-top: 65px;
+    background-color: transparent;
+    color: var(--white);
+}
+
+/* Positions the left carousel button 45 pixels from the left edge. */
+.home-carousel-button.left {
+    left: 45px;
+}
+
+/* Positions the right carousel button 45 pixels from the right edge. */
+.home-carousel-button.right {
+    right: 45px;
+}
+
+/* Styles the icons within the carousel buttons with a large font size and white color. */
+.home-carousel-button span.material-icons {
+    font-size: 60px;
+    color: var(--white);
+}
+
+/* Defines the home scroll animation that moves elements from their original position to the left by 200%. */
+@keyframes home-scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-200%);
+    }
+}
+
+
+/* Pauses the carousel track animation when the carousel container is hovered over. */
+.home-carousel-container:hover .home-carousel-track {
+    animation-play-state: paused;
+}
+
+/* Styles the hero section with relative positioning, height, and flex layout for centering content. */
+.home-hero {
+    position: relative;
+    height: 60vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    background-color: var(--dark_blue);
+}
+
+/* Styles the hero content to be positioned centrally with left alignment and padding. */
+.home-hero-content {
+    position: absolute;
+    top: 50%;
+    left: 40px;
+    transform: translateY(-50%);
+    padding: 20px;
+    max-width: 600px;
+    text-align: left;
+    z-index: 2;
+}
+
+/* Styles the main heading in the hero section with a large font size and bottom padding. */
+.home-hero h1 {
+    font-size: 2.5rem;
+    margin: 0;
+    padding-bottom: 20px;
+}
+
+/* Styles the pink button in the hero section with specific margins, font size, width, and bold weight. */
+.home-hero .pink_button {
+    margin-top: 40px;
+    font-size: 15px;
+    width: 120px;
+    font-weight: bold;
+}
+
+/* Styles the hero video to cover the section with specific brightness, sepia, and hue adjustments. */
+.home-hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(50%) sepia(20%) hue-rotate(-10deg);
+}
+
+/* Styles the hero overlay to cover the entire section with a dark blue color and blur effect. */
+.home-hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--dark_blue);
+    opacity: 0.24;
+    z-index: 1;
+    filter: blur(80px);
+    -webkit-filter: blur(8px);
+}
+
+
+/* Partners Carousel Styling */
+.home-partners {
+    background-color: var(--dark_blue);
+}
+
+/* Promotial Video Styling */
+.home-promo-videos {
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+/* Styles the home video content with a flex layout, light gray background, rounded corners, and box shadow. */
+.home-video-content {
+    display: flex;
+    background-color: var(--light_gray);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    padding-top: 20px;
+    padding-bottom: 5px;
+    padding-right: 30px;
+    padding-left: 30px;
+    max-width: 80%;
+    margin: auto;
+    font-weight: 500;
+}
+
+/* Styles the video text section with flexible width and padding. */
+.video-text {
+    flex: 1;
+    padding: 25px;
+}
+
+/* Styles the pink button in the video text section with specified padding. */
+.video-text .pink_button {
+    padding: 15px 60px;
+}
+
+/* Styles the main heading in the video text section with dark blue color, margin, padding, and bold weight. */
+.video-text h1 {
+    color: var(--dark_blue);
+    margin: 0 0 10px;
+    padding-top: 15px;
+    padding-bottom: 10px;
+    font-weight: bold;
+}
+
+/* Styles paragraph text in the video section with an anthracite color. */
+.video-text p {
+    color: var(--antracite);
+}
+
+/* Styles the video frame with flexible width and padding. */
+.video-frame {
+    flex: 1.5;
+    padding: 10px;
+}
+
+/* Styles the video frame to have a fixed height of 300px, no border, and rounded corners. */
+.video-frame iframe {
+    width: 100%;
+    height: 300px;
+    border: none;
+    border-radius: 20px;
+}
+
+/* Styles the home video button with padding, rounded corners, and bold white text. */
+.home-video-button {
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: var(--white);
+    border-radius: 5px;
+    margin-top: 20px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+/* Video phone Styling */
+@media (max-width: 768px) {
+    /* Styles the home video content to arrange items in a column and center align the text. */
+    .home-video-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    /* Styles the video frame to be responsive with a minimum height of 300px. */
+    .video-frame iframe {
+        width: 100%;
+        height: auto;
+        min-height: 300px;
+    }
+    
+    /* Styles the video text with padding. */
+    .video-text {
+        padding: 20px;
+    }
+}
+
+/* Quote Styling */
+.home-quote {
+    background-color: var(--dark_blue);
+    color: var(--white);
+    padding: 1px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 40px;
+}
+
+/* Why us Styling */
+.home-why-choose {
+    background-color: var(--white);
+}
+
+/* Styles the benefits section as a flex container with spacing between items. */
+.home-benefits {
+    display: flex;
+    gap: 25px;
+}
+
+/* Styles images in the home benefit section to be responsive with a maximum width of 100%. */
+.home-benefit img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Styles the reviews section with a light gray background. */
+.home-reviews {
+    background-color: var(--light_gray);
+}
+
+/* Styles the review card with a white background, padding, rounded corners, and margin. */
+.home-review-card {
+    background-color: var(--white);
+    padding: 15px;
+    border-radius: 5px;
+    margin: 10px;
+}
+
+/* Styles the home image section with a white background. */
+.home-image-section {
+    background-color: var(--white);
+}
+
+/* Styles images in the home image section to be responsive with a maximum width of 100%. */
+.home-image-section img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Styles the "Why Choose Us" section with padding and bold text. */
+.home-why-choose-us {
+    padding: 50px 20px;
+    font-weight: bold;
+}
+
+/* Styles the home choose content with a maximum width and center alignment. */
+.home-choose-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Styles the heading in the choose text section with dark blue color and large font size. */
+.choose-text h1 {
+    font-size: 2.5rem;
+    color: var(--dark_blue);
+    margin-bottom: 60px;
+    margin-top: 10px;
+}
+
+/* Styles the container for choose boxes as a flex layout, allowing wrapping and spacing between items. */
+.choose-boxes {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Styles the choose box with a light gray background, rounded corners, and centered text. */
+.choose-box {
+    background-color: var(--light_gray); 
+    border-radius: 10px;
+    overflow: hidden;
+    width: 30%;
+    position: relative;
+    text-align: center;
+}
+
+/* Styles the box header with padding and a flex layout, centering its content. */
+.box-header {
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px var(--light_gray);
+}
+
+/* Styles the header text with dark blue color and a moderate font size. */
+.box-header-text {
+    font-size: 1.3rem;
+    color: var(--dark_blue);
+    margin-right: 10px;
+}
+
+/* Styles the box icon with a pink color and larger font size. */
+.box-icon {
+    font-size: 1.8rem;
+    color: var(--pink);
+}
+
+/* Styles images within choose boxes to be full width and display as block elements. */
+.choose-box img {
+    width: 100%;
+    display: block;
+}
+
+/* Styles the "Why Us" button with padding, rounded corners, and bold white text. */
+.home-whyus-button {
+    display: inline-block;
+    padding: 15px 150px;
+    text-decoration: none;
+    color: var(--white);
+    border-radius: 5px;
+    margin-top: 40px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Reviews Styling */
+.home-reviews {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    padding: 30px;
+    background-color: var(--white);
+}
+
+/* Styles the review card with a light gray background, padding, and rounded corners. */
+.home-review-card {
+    background-color: var(--light_gray);
+    padding: 20px;
+    border-radius: 10px;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Styles the review title with a dark blue color and a bottom margin. */
+.home-review-title {
+    font-size: 1.5rem;
+    color: var(--dark_blue);
+    margin-bottom: 10px;
+}
+
+/* Styles the review text with an anthracite color and adds a bottom margin. */
+.home-review-text {
+    color: var(--antracite);
+    margin-bottom: 20px;
+}
+
+/* Styles the review footer as a flex container, aligning items to the left. */
+.home-review-footer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: auto;
+}
+
+/* Styles the review logo as a circular image with a fixed size. */
+.home-review-logo {
+    width: 70px;
+    height: 70px;
+    margin-right: 15px;
+    border-radius: 50%;
+    object-fit: contain;
+}
+
+/* Styles the client's name in the review card with a dark blue color and bold font weight. */
+.home-review-client {
+    color: var(--dark_blue);
+    font-weight: bold;
+}
+
+/* Styles the date text in the review card with an anthracite color and a smaller font size of 0.9rem, with no left margin. */
+.home-review-date {
+    color: var(--antracite);
+    font-size: 0.9rem;
+    margin-left: 0px;
+}
+
+/* Why us phone Styling */
+@media (max-width: 768px) {
+
+    .home-hero .pink_button {
+        margin-top: 0px;
+        font-size: 15px;
+        width: 120px;
+        font-weight: bold;
+    }
+    
+    /* Styles the "home-reviews" container to arrange its items in a vertical column and center them. */
+    .home-reviews {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Styles the "home-review-card" to have 80% width and adds 20px of bottom margin for spacing between cards. */
+    .home-review-card {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+
+    /* Styles the "choose-boxes" container to arrange its items in a vertical column and center them. */
+    .choose-boxes {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Styles a container box with full width but limits its maximum width to 400px. */
+    .choose-box {
+        width: 100%;
+        max-width: 400px;
+    }
+    
+    /* Styles the "Why Us" button with a pink background, white text, rounded corners, and a hover transition. */
+    .home-whyus-button {
+        background-color: var(--pink);
+        border: none;
+        border-radius: 7px;
+        padding: 20px 40px;
+        font-size: 1.5rem;
+        cursor: pointer;
+        text-align: center;
+        display: inline-block;
+        text-decoration: none;
+        color: var(--white);
+        transition: background-color 0.3s ease;
+    }
+
+    .home-carousel-button span.material-icons {
+        font-size: 60px;
+        color: var(--white);
+        text-shadow: 1px 1px 15px var(--antracite);
+        -webkit-text-stroke: 2px var(--antracite); /* Zwarte outline toevoegen */
+    }
+    
+
+}

@@ -1,0 +1,149 @@
+Pseudocode HTML:
+
+Begin van een html document:
+de taal is engels 
+de UTF-08
+viewport zodat het responsief wordt
+een favicon
+link voor google icons en stylesheet
+link naar favicon 
+JavaScript bestand voor cookies
+boxicons voor extra pictogrammen
+titel van de pagina
+
+Body van de pagina
+Header sectie
+
+Navigatiebalk
+Weergave logo van Depot Software
+Link naar homepagina wanneer op logo wordt geklikt
+Menu-icoon voor mobiel
+Navigatielinks
+Link naar home
+Link naar store
+Link naar implementatie
+Link naar over ons
+Link naar contact
+Zoekbalk
+Invoerveld voor zoeken
+Zoekicoon
+Gebruikers- en winkelwagentikonen
+Link naar login portaal
+Link naar winkelwagen
+Toon aantal producten in winkelwagen
+Script voor navigatie
+Script voor winkelwagentikoon
+Hoofdgedeelte van de pagina
+
+Achtergrond
+Toon titel "Sitemap"
+Toon hoofdstukken van de pagina
+Toon links naar belangrijke pagina's
+Toon links naar webshop pagina's
+
+Begin van de footer
+logo en links 
+logo met link naar de homepagina
+contact
+email en telefoonnummer
+adres en informatie
+titel 
+linkjes naar verschillende pagina's 
+titel van Customers
+linkjes voor de login, support en privacy instellingen
+afbeelding van het team 
+zoekbalk
+vlaggen voor verschillende talen 
+en de partnerlogo's
+
+einde Footer-inhoud
+
+Onderkant van de footer
+knop voor privacy instellingen
+copyright en links naar voorwaarden en de sitemap
+sociale media iconen
+einde Footer-onderkant
+
+knop om naar boven te scrollen
+icoon om naar boven te scrollen
+
+einde body 
+
+einde HTML-document
+
+------------------------------------------------------------------------------------------------------------- 
+
+Pseudocode CSS:
+
+Stijl voor de kleuren:
+DEFINIEER KLEUREN:
+WIT = #ffffff
+ZWART = #000000
+GROEN = #7ded89
+ROOD = #ff002f
+ANTRACIET = #60625f
+LICHT_GRijs = #edebea
+LICHT_BLAUW = #42bedd
+DONKER_BLAUW = #2f7193
+
+Algemene stijlen voor de body
+Lettertype: Arial, sans-serif
+Kleur: zwart (var(--zwart))
+Marge: 0
+Padding: 0
+
+Stijlen voor links in paragrafen in de main sectie
+Fontgrootte: 30px
+Kleur: lichtblauw (var(--licht_blauw))
+Lettertype gewicht: bold
+Tekstdecoratie: geen
+
+Stijlen voor h3-koppen in de main sectie
+Fontgrootte: 45px
+Kleur: donkerblauw (var(--donker_blauw))
+Lettertype gewicht: bold
+Tekstdecoratie: geen
+
+Stijlen voor de main sectie
+Padding: 50px
+
+Stijlen voor h1-koppen in de main sectie
+Fontgrootte: 40px
+Kleur: donkerblauw (var(--donker_blauw))
+Lettertype gewicht: bold
+Tekstuitlijning: center
+Tekstdecoratie: geen
+
+Stijlen voor de achtergrond
+Achtergrondkleur: lichtgrijs (var(--licht_grijs))
+Padding links: 50px
+Padding rechts: 50px
+Border-radius: 30px
+Padding boven: 20px
+Padding onder: 40px
+
+Media query voor schermen kleiner dan 880px
+Links in paragrafen:
+Fontgrootte: 20px
+Kleur: lichtblauw (var(--licht_blauw))
+Lettertype gewicht: bold
+Tekstdecoratie: geen
+h3-koppen:
+Fontgrootte: 30px
+Kleur: donkerblauw (var(--donker_blauw))
+Lettertype gewicht: bold
+Tekstdecoratie: geen
+Main sectie:
+Padding: 50px
+h1-koppen:
+Fontgrootte: 30px
+Kleur: donkerblauw (var(--donker_blauw))
+Lettertype gewicht: bold
+Tekstuitlijning: center
+Marge onder: 40px
+Achtergrond:
+Flex: auto
+Flex-richting: column
+Tekstuitlijning: center
+
+einde van de css

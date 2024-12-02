@@ -1,0 +1,157 @@
+Pseudocode CSS:
+
+
+Begin van css document
+
+Algemene instellingen voor HTML en BODY:
+lettertype is Arial
+hoogte van html is 100%
+
+achtergrondkleur van body is wit 
+body flexbox met verticale kolommen
+minimale hoogte van de body is 100%
+
+stijl voor actieve knop:
+achtergrondkleur
+
+stijl voor de navbar:
+flexbox met uitlijnen in het midden 
+achtergrondkleur
+padding
+een onderrand aan de navbar
+
+stijl zoekcontainer in de footer:
+zoekcontainer in de flexbox 
+achtergrondkleur en padding 
+
+zoekinvoer in zoekcontainer:
+padding
+lettergrootte
+breedte
+rand radius voor invoerveld
+
+navbar logo 
+marge aan de rechterkant
+
+navbar logo afbeelding
+hoogte
+
+verberg de regulieren navbar knoppen
+
+stijl voor de knoppen tekst:
+kleur
+padding
+lettergrootte
+overgang van de achtergrondkleur bij hover 
+
+hover effect van de knoppen
+achtergrondkleur
+
+actieve link stijl navbar:
+achtergrondkleur
+dikgedrukte lettertype voor actieve link 
+
+zoekcontainer in de navbar:
+flexbox met uitlijnen in het midden 
+marge aan de linkerkant van de zoekcontainer
+
+zoekcontainer stijl:
+padding, lettergrootte en breedte voor invoerbeld 
+
+zoek icoon:
+positie voor in de zoekcontainer
+
+navbar icoon locaties:
+flexbox met uitlijning in het midden 
+
+icoon groottes:
+lettergrootte voor navbar iconen 
+
+icoonknop stijl:
+kleur
+lettergrootte
+
+Media query voor kleinere schermen (mobiel)
+als scherm kleiner is dan 1200px dan:
+navbar in op flexbox met rijrichting
+padding en achtergrondkleur in voor navbar
+
+Logo-aanpassingen voor kleinere schermen
+hoogte in voor navbar-logo afbeelding in
+
+Maak het menu-icoon zichtbaar
+weergave in voor menu-icoon in op blok
+
+Positie van login- en winkelwagentje-iconen
+navbar-iconen in als flexbox met marge aan de linkerkant
+
+Verminder de ruimte tussen de iconen
+marge in voor icoonknoppen in
+
+Zoekbalk aanpassingen voor mobiel
+zoekcontainer in op maximaal 200px breed
+
+
+Toon het menu-icoon op kleinere schermen
+@media screen en (max-width: 1200px) dan
+    menu-icoon in als zichtbaar
+
+Verberg reguliere navbar-links
+weergave in voor navbar-links op geen
+
+Bij uitbreiding, toon navbar-links in verticale kolom
+als navbar is uitgebreid dan
+navbar-links in als blokken
+achtergrondkleur en padding in voor navbar-links
+lettertype vet in voor navbar-links
+
+Maak navbar flex-kolom wanneer uitgebreid
+als navbar is uitgebreid dan
+navbar in als flex-kolom
+
+Pas menu-icoon plaatsing aan voor mobiel wanneer uitgebreid
+als navbar is uitgebreid dan
+positie in voor menu-icoon
+
+Pas zoekbalk plaatsing aan voor mobiel wanneer uitgebreid
+als navbar is uitgebreid dan
+zoekcontainer in als breedte 100%
+
+Zorg ervoor dat iconen correct uitgelijnd zijn in uitgebreide weergave
+als navbar is uitgebreid dan
+margin-top in voor iconen
+
+einde Media query
+
+einde van de css
+
+--------------------------------------------------------------------------------------------------------------
+
+Pseudocode JavaScript:
+
+
+begin van JavaScript
+
+Voeg een click-event listener toe aan het menu-icoon
+zoek menu-icoon element met class '.nav-bar-menu-icon'
+wanneer het menu-icoon wordt geklikt doen
+Zoek de navbar
+zoek navbar element met class '.navbar'
+    
+Wissel de klasse 'expanded' in de navbar
+als navbar heeft klasse 'expanded' dan
+verwijder klasse 'expanded' vam navbar
+anders
+voeg klasse 'expanded' toe aan navbar
+
+Zoek het span-element binnen het menu-icoon
+zoek menu-icoon tekst element binnen '.nav-bar-menu-icon'
+
+als navbar heeft klasse 'expanded' dan
+Wijzig de tekst in het menu-icoon naar 'close' (X)
+stel tekstinhoud in op 'close'
+anders
+Wijzig de tekst terug naar 'menu'
+stel tekstinhoud in op 'menu'
+
+einde JavaScript

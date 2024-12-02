@@ -1,0 +1,157 @@
+Pseudocode HTML:
+
+Begin van een html document:
+de taal is engels 
+de UTF-08
+viewport zodat het responsief wordt
+een favicon
+link voor google icons en stylesheet
+link naar favicon 
+JavaScript bestand voor cookies
+boxicons voor extra pictogrammen
+titel van de pagina
+
+Begin van de Pagina (Body)
+Navigatiebalk (Header)
+logo naar startpagina
+knop voor alleen mobiele weergave 
+links naar verschillende pagina'
+zoekveld 
+iconen om in te loggen en winkelwagen 
+JavaScript voor navigatie balk
+
+Hoofdgedeelte van de Pagina
+Implementaties sectie
+
+titel van de pagina 
+tekst over de voordelen van de software 
+afbeelding van tablet en een knop die naar de webshop leidt 
+
+Flowchart sectie
+Afbeelding van een flowchart die het implementatieproces Toont
+
+Toon een afbeelding van een flowchart die het implementatieproces uitlegt.
+
+Begin van de footer
+logo en links 
+logo met link naar de homepagina
+contact
+email en telefoonnummer
+adres en informatie
+titel 
+linkjes naar verschillende pagina's 
+titel van Customers
+linkjes voor de login, support en privacy instellingen
+afbeelding van het team 
+zoekbalk
+vlaggen voor verschillende talen 
+en de partnerlogo's
+
+einde Footer-inhoud
+
+Onderkant van de footer
+knop voor privacy instellingen
+copyright en links naar voorwaarden en de sitemap
+sociale media iconen
+einde Footer-onderkant
+
+knop om naar boven te scrollen
+icoon om naar boven te scrollen
+
+einde body 
+
+einde HTML-document
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Pseudocode CSS:
+
+Stijl voor de kleuren:
+DEFINIEER KLEUREN:
+WIT = #ffffff
+ZWART = #000000
+GROEN = #7ded89
+ROOD = #ff002f
+ANTRACIET = #60625f
+LICHT_GRijs = #edebea
+LICHT_BLAUW = #42bedd
+DONKER_BLAUW = #2f7193
+
+hoofdtekst voor de implementaties:
+de tekst 
+kleur is donkerblauw
+lettergrootte is 3em
+de margin aan de onderkant is 10px
+    
+subtekst voor de implementaties:
+de subtext van de implementaties
+kleur is luchtblauw
+lettergrootte is 2.2rem
+margin aan de onderkant is 10px
+
+beschrijving van de implementaties:
+kleur is antraciet
+lettergrootte is 1.5rem
+margin aan de onderkant is 20px
+
+container voor de implementaties:
+display is flex 
+justify content is ruimte ertussen 
+de items beginnen aan het begin van de flexbox
+de padding is 70px
+
+Tekstcontainer binnen de implementaties:
+margin links is 90px
+flex is 1, dus hij begint vooraan 
+maximale breedte is 60%
+
+afbeelding binnen emplementaties:
+breedte is 100%
+maximale breedte is 350px
+hoogte wordt automatisch gedaan 
+margin aan de onderkant is 60px
+
+de roze knop: 
+font weight is BOLD
+lettergrootte is 25px
+margin rechts is 60px
+achtergrondkleur is roze 
+kleur is wit 
+hoek zijn 5px
+padding is 15px en 30px 
+geen text decoratie 
+de achtergrond kleur veranderd na 0.3 seconden 
+
+stijl hover button:
+achtergrondkleur is #d15454
+
+container voor de flowchart:
+padding is 100px
+margin rechts is 50px
+margin links is 50px
+breedte is 100%
+maximale breedte is 1500px
+hoogte is automatisch
+en de objecten moeten passen 
+
+mediaqueries:
+
+schermen tot 1200px:
+@MEDIA (MAX_BREEDTE: 1200px) 
+de directie wordt in kolommen
+de tekst komt in het midden 
+de items worden gecentreerd in het midden 
+margin boven is -30px
+margin links is 0px
+maximale breedte is 80%
+margin aan de onderkant 20px
+margin rechts is 0 px
+
+roze knop:
+margin rechts is automatisch
+
+schermen tot 800px:
+geen display van de flowchart container
+
+einde van de css

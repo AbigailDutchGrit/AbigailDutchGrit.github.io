@@ -661,9 +661,13 @@
         display: flex;
     }
 
-    .store-product-price {
-        margin-right: 10px !important;  /* Forceer een rechter marge */
+   
+
+    
+    .button_shop {
+        margin-right: 30px !important;
     }
+
 
 
     .selected-filters-card-side {

@@ -594,7 +594,7 @@
 @media screen and (max-width: 630px) {
 
 .button_shop {
-    font-size: 10px;
+    font-size: 8px !important;
 }
 /* Suggestie tekst */
     #suggestion-text {

@@ -604,10 +604,6 @@
         text-align: center; /* Centreert de tekst binnen het element */
     }
 
-    .button_shop {
-        margin-right: 30px;
-        font-size: 14px;
-    }
 
     /* Container voor "not found" bericht */
     #not-found-container {

@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../header & footer/style_header-footer.css">
+    <link rel="icon" href="../media/favicon.ico">
+    <link rel="stylesheet" href="style/style request.css">
+    <link rel="stylesheet" href="style/style contact information order.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Icons&family=Material+Symbols+Outlined" />
+    <link rel="stylesheet" href="style/style-index.css">
+    <title>Request Page</title>
+</head>
+
+<body>
+    <header>
+        <!-- Navigation Bar -->
+        <nav class="navbar">
+            <div class="navbar-logo">
+                <img src="../media/depotsoftware.webp" alt="Depot Software"
+                    onclick="window.location.href='../pages/home.html';">
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="go-back-container">
+            <button class="go-back-btn" onclick="window.history.back()">
+                <span class="material-icons">arrow_back</span> Go back
+            </button>
+        </div>
+
+        <div class="progress-bar">
+            <div class="step active">
+                <div class="step-number">
+                    <span class="material-icons">check</span>
+                </div>
+                <div class="step-label">Address</div>
+            </div>
+            <div class="step active">
+                <div class="step-number">2</div>
+                <div class="step-label">Request</div>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-label">Finish</div>
+            </div>
+        </div>
+
+        <div class="order-request-text">
+            <h1>Order Request</h1>
+        </div>
+        <div class="check-text">
+            <h4>Please check your information and order to continue!</h4>
+        </div>
+
+        <div class="customer-info">
+            <h2>Customer Information</h2>
+            <div class="data-customer">
+                <p><strong>Name:</strong> <span id="display-name"></span></p>
+                <p><strong>Last Name:</strong> <span id="display-lastname"></span></p>
+                <p><strong>Email:</strong> <span id="display-email"></span></p>
+                <p><strong>Telephone:</strong> <span id="display-telephone"></span></p>
+            </div>
+        </div>
+
+        <div class="request-items"></div>
+
+        <!-- Nieuwe sectie voor zinnen en knop, net boven de footer -->
+        <div class="additional-info">
+            <p>After you press the button below your order will be sent to Depot Software!</p>
+            <p>Check your inbox for the vertification!</p>
+            <button class="press-to-place-order-btn"  onclick="window.location.href='order placed.html'">
+                Press to place order
+            </button>
+        </div>
+    </main>
+
+    <!-- Cookie consent banner -->
+    <link rel="stylesheet" href="../header & footer/cookies.css">
+    <script src="../header & footer/cookies.js" defer></script>
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css">
+    <div class="cookie-wrapper">
+        <div class="cookiesheader">
+            <i class="bx bx-cookie"></i>
+            <h2>Cookie Consent</h2>
+        </div>
+        <div class="cookie-data">
+            <p>To improve our website and offer you a personalized experience, we use a variety of tools as defined in our
+                <a href="https://www.iubenda.com/privacy-policy/30671546">privacy policy</a>.</p>
+        </div>
+    
+        <div class="cookie-buttons">
+            <button class="accept-button" id="acceptBtn">Accept</button>
+            <button class="info-settings-button" id="infoBtn">Info & settings</button>
+        </div>
+    </div>
+    
+    <!-- Popup for detailed cookie settings -->
+    <div class="popup-overlay" id="popupOverlay">
+        <div class="popup-box" id="popupBox">
+            <span class="close-popup" id="closePopup">&times;</span>
+            <h3>Choose your cookie settings</h3>
+            <p>This website performs at its best when we are able to collect and analyse your personal browsing behaviour.
+                By analysing the collected data, we can create an even better browsing experience for you! In our effort to
+                collect your information, we make use of tracking cookies.</p>
+            <p>Please make your choice below to give consent for the data collection. More information about the data usage
+                can be found in our <a href="https://www.iubenda.com/privacy-policy/30671546">privacy policy</a>.</p>
+            <div class="popup-options">
+                <div class="option">
+                    <button class="popup-btn" id="anonymousBtn">Anonymous browsing</button>
+                    <p>I don't want to share my personal behaviour and understand that some parts of this website may not
+                        function properly.</p>
+                </div>
+                <div class="option">
+                    <button class="popup-btn" id="fullFunctionBtn">Fully functioning website</button>
+                    <p>I agree to share my personal browsing behaviour to allow for a fully functioning website.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="collom">
+        <hr style="margin-top: -1px;">
+        <!-- Area for the logo and the links around the site -->
+        <div class="footer_logo">
+            <img src="../media/depotsoftware.webp" alt="Depot Software"
+                onclick="window.location.href='../pages/home.html';">
+        </div>
+        <div class="footer-container">
+            <div class="left-side">
+                <div class="contact">
+                    <h3>Contact</h3>
+                    <p>Email: <a href="mailto:info@depotsoftware.com">info@depotsoftware.com</a></p>
+                    <p>Telefoon: <a href="tel:31889998999">+31 88 999 8999</a></p>
+                    <p>Adres: <a
+                            href="https://www.google.com/maps?rlz=1C1ONGR_nlNL987NL987&sxsrf=ALiCzsYZG5MF2WryvnxhslGB4Gt3lF2r0w:1666708591893&q=De+Zelling+8+3342+GS+Hendrik-Ido-Ambacht+The+Netherlands&biw=1680&bih=931&dpr=1&um=1&ie=UTF-8&sa=X&ved=2ahUKEwjx2d6tzfv6AhXZhv0HHf-UDDgQ_AUoAXoECAIQAw">De
+                            Zelling 8<br>3342GS Hendrik-Ido-Ambacht<br>The Netherlands</a></p>
+    
+                </div>
+            </div>
+    
+            <div class="container-start-cus">
+                <div class="start-using">
+                    <h3>Start Using Depot Software</h3>
+                    <p><a href="../pages/about us 1.html">About us</a></p>
+                    <p><a href="../webshop/store.html">Solution's store</a></p>
+                    <p><a href="../pages/implementations.html">Implementations</a></p>
+                </div>
+    
+                <div class="customers">
+                    <h3>Customers</h3>
+                    <p><a href="../portal/login.html">Login portal</a></p>
+                    <p><a href="../pages/contact.html">Send a support ticket</a></p>
+                    <p><a href="../pop-up/privacy settings.html">Privacy settings</a></p>
+                </div>
+            </div>
+            <!-- Image of our team -->
+            <div class="img-about-us right-side">
+                <img src="../media/team.webp">
+            </div>
+            <!-- Search bar -->
+            <div class="footer-search-container">
+                <div class="footer-bar-search-container" onclick="window.location.href='../pages/search-results.html'">
+                    <input type="text" placeholder="Search">
+                    <span class="material-icons nav-bar-search-icon">search</span>
+                </div>
+    
+                <div class="language-flags-container">
+                    <div class="language-flags">
+                        <img href="#" src="../media/germany.webp" alt="DE">
+                        <img href="#" src="../media/netherlands.webp" alt="NL">
+                        <img href="#" src="../media/spain.webp" alt="ES">
+                        <img href="#" src="../media/english.webp" alt="ENG">
+                    </div>
+                </div>
+            </div>
+            <!-- Logo's of our partners -->
+            <div class="partner-logos">
+                <div class="logo-row">
+                    <img class="itco_logo" src="../media/itco-sgf.webp" alt="ITCO logo & SGF logo">
+                </div>
+                <img class="microsoft_logo" src="../media/microsoft.webp" alt="Microsoft Partner logo">
+            </div>
+        </div>
+    
+        <hr>
+        <!-- Bottom layer of the footer with additional info -->
+        <div class="footer-bottom">
+            <button class="privacy-btn" id="infoprivacy">Privacy Settings</button>
+            <p class="terms_bottom">&copy; 2024 - <a href="terms & conditions.html">Terms & Conditions</a> | <a
+                    href="privacy policy.html">Privacy Policy</a> | <a href="sitemap.html">Sitemap</a></p>
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/company/depotsoftware#" target="_blank" rel="noopener noreferrer">
+                    <img src="../media/linkedin.webp" alt="LinkedIn">
+                </a>
+                <a href="https://www.youtube.com/playlist?list=PLumDEh0xMtUTWHhcQ6U19IQeum00ztJYI" target="_blank"
+                    rel="noopener noreferrer">
+                    <img src="../media/youtube.webp" alt="YouTube">
+                </a>
+                <a href="https://www.instagram.com/lucrasoftict?igsh=cGJxcXBka3hhM2h3" target="_blank"
+                    rel="noopener noreferrer">
+                    <img src="../media/instagram.webp" alt="Instagram">
+                </a>
+                <a href="https://www.depotsoftware.com/news-customer-cases/rss/" target="_blank" rel="noopener noreferrer">
+                    <img src="../media/rss.webp" alt="RSS">
+                </a>
+            </div>
+        </div>
+    </footer>
+    <script src="script/script request.js"></script>
+</body>
+
+</html>

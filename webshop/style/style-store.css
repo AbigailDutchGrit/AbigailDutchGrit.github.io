@@ -57,11 +57,14 @@
     border-radius: 7px;
     height: 40px;
     display: flex;
-    text-align: center;
     align-items: center;
+    justify-content: center;  /* Zorg voor consistent centreren */
     cursor: pointer;
     margin-top: 5px;
+    -webkit-transition: all 0.3s ease;  /* Vendor-prefix */
+    transition: all 0.3s ease;
 }
+
 
 
 .button_shop .material-icons-outlined {

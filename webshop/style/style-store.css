@@ -619,6 +619,10 @@
         margin-bottom: 400px;
     }
 
+    .button_shop{
+        width: 45%;
+    }
+
     /* Contact knop */
     .contact-button {
         margin: 1vh auto; /* Centreren met auto margin, en vh voor responsiviteit */

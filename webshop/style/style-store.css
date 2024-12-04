@@ -591,6 +591,15 @@
 }
 
 @media screen and (max-width: 630px) {
+
+    .button_shop {
+        margin-right: 35px;
+        width: 140px;
+        font-size: 12px;
+    }
+    
+
+    
 /* Suggestie tekst */
     #suggestion-text {
         display: flex; /* Zet het element op flexbox */
@@ -1088,4 +1097,3 @@ main .pink_button {
         font-size: 2rem; /* Kleinere iconen */
     }
 }
-

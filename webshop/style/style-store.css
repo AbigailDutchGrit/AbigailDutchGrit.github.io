@@ -48,7 +48,8 @@
     border-radius: 7px;
 }
 
-.pink_button_shop {
+.button_shop {
+    background-color: var(--dark_blue);
     color: var(--white);
     border: none;
     margin-right: 40px;
@@ -63,7 +64,7 @@
 }
 
 
-.pink_button_shop .material-icons-outlined {
+.button_shop .material-icons-outlined {
     margin-left: 5px;
 }
 

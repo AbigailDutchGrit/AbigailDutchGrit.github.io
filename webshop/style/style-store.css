@@ -63,6 +63,7 @@
     margin-top: 5px;
 }
 
+
 .button_shop .material-icons-outlined {
     margin-left: 8px;
 }
@@ -762,6 +763,15 @@
 
 }
 
+
+@media not all and (min-resolution:.001dpcm) { 
+    @supports (-webkit-appearance:none) {
+    .button_shop {
+    margin-right: 30px;
+    font-size: 14px;
+}
+    }
+}
 
 
 

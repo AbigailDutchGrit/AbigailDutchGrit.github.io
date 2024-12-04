@@ -63,7 +63,6 @@
     margin-top: 5px;
 }
 
-
 .button_shop .material-icons-outlined {
     margin-left: 8px;
 }
@@ -602,6 +601,10 @@
         
         margin-right: 110px;
         text-align: center; /* Centreert de tekst binnen het element */
+    }
+
+    .button_shop {
+       -webkit-margin-right: 30px;
     }
 
 

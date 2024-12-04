@@ -1,6 +1,4 @@
 /* Zorg ervoor dat je alle imports hebt, zoals in je originele bestand */
-
-
 @import url('../../header & footer/color_pallet.css');
 
 
@@ -15,18 +13,6 @@
         color: var(--antracite);
     }
 }
-
-@media (max-width: 768px) {  /* Voor kleinere schermen */
-        .store-product-footer {
-            flex-direction: column;  /* Zet de prijs en knop onder elkaar */
-            align-items: center;  /* Centreer de items */
-            gap: 10px;  /* Voeg ruimte tussen de elementen toe */
-        }
-    
-        .store-product-price {
-            margin-bottom: 5px;  /* Voeg wat ruimte onder de prijs toe */
-        }
-    }
 
 .store-product-link {
     text-decoration: none; /* Verwijder de onderlijn van de hyperlink */
@@ -660,14 +646,6 @@
     .selected-filters-card-side.visible {
         display: flex;
     }
-
-   
-
-    
-    .button_shop {
-        margin-right: 30px !important;
-    }
-
 
 
     .selected-filters-card-side {

@@ -137,6 +137,7 @@ document.addEventListener('DOMContentLoaded', function () {
         `;
     }
 
+
     // Functie om filters op te slaan in localStorage
     function saveFiltersToLocalStorage() {
         localStorage.setItem('selectedFilters', JSON.stringify(selectedFilters));

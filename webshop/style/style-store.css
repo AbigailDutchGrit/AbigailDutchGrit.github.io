@@ -661,6 +661,10 @@
         display: flex;
     }
 
+    .store-product-price {
+        margin-right: 10px !important;  /* Forceer een rechter marge */
+    }
+
 
     .selected-filters-card-side {
         display: flex;

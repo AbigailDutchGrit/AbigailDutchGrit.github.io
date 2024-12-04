@@ -1,4 +1,6 @@
 /* Zorg ervoor dat je alle imports hebt, zoals in je originele bestand */
+
+
 @import url('../../header & footer/color_pallet.css');
 
 
@@ -57,14 +59,11 @@
     border-radius: 7px;
     height: 40px;
     display: flex;
+    text-align: center;
     align-items: center;
-    justify-content: center;  /* Zorg voor consistent centreren */
     cursor: pointer;
     margin-top: 5px;
-    -webkit-transition: all 0.3s ease;  /* Vendor-prefix */
-    transition: all 0.3s ease;
 }
-
 
 
 .button_shop .material-icons-outlined {
@@ -607,10 +606,6 @@
         text-align: center; /* Centreert de tekst binnen het element */
     }
 
-    .button_shop {
-       -webkit-margin-right: 30px;
-    }
-
 
     /* Container voor "not found" bericht */
     #not-found-container {
@@ -766,15 +761,6 @@
 
 }
 
-
-@media not all and (min-resolution:.001dpcm) { 
-    @supports (-webkit-appearance:none) {
-    .button_shop {
-    margin-right: 30px;
-    font-size: 14px;
-}
-    }
-}
 
 
 

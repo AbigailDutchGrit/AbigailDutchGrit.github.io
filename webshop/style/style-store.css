@@ -16,6 +16,18 @@
     }
 }
 
+@media (max-width: 768px) {  /* Voor kleinere schermen */
+        .store-product-footer {
+            flex-direction: column;  /* Zet de prijs en knop onder elkaar */
+            align-items: center;  /* Centreer de items */
+            gap: 10px;  /* Voeg ruimte tussen de elementen toe */
+        }
+    
+        .store-product-price {
+            margin-bottom: 5px;  /* Voeg wat ruimte onder de prijs toe */
+        }
+    }
+
 .store-product-link {
     text-decoration: none; /* Verwijder de onderlijn van de hyperlink */
     color: inherit; /* Zorg ervoor dat de tekstkleur gelijk is aan de kleur van het omringende tekst */

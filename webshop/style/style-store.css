@@ -590,13 +590,7 @@
     }
 }
 
-/* Voor telefoons (max-width: 767px) */
 @media screen and (max-width: 630px) {
-
-    .button_shop {
-        font-size: 8px !important;
-        background-color: var(--light_blue);
-    }
 /* Suggestie tekst */
     #suggestion-text {
         display: flex; /* Zet het element op flexbox */

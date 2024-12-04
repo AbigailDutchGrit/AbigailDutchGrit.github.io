@@ -1057,6 +1057,10 @@ main .pink_button {
         font-size: 14px; /* Kleinere tekst voor mobiel */
     }
 
+    .button_shop{
+        width: 45%;
+    }
+
     .popup-product img,
     .popup-recommendations img {
         width: 40px; /* Kleinere afbeeldingen */

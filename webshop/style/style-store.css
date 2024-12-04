@@ -48,6 +48,8 @@
     border-radius: 7px;
 }
 
+.button_shop {
+    background-color: var(--dark_blue);
 .pink_button_shop {
     color: var(--white);
     border: none;
@@ -327,7 +329,7 @@
     margin-right: 0apx;
     height: 45px;
     height: 100%;
-    
+
 }
 
 .pagination-button {
@@ -369,7 +371,7 @@
     margin-top: 1px;
     justify-content: center; /* Horizontaal centreren */
     align-items: center; /* Verticaal centreren */
-    
+
 }
 #arrow-back{
     margin-left: 0px;
@@ -458,7 +460,7 @@
     cursor: pointer;
     border-radius: 5px; /* Rond de hoeken af */
     transition: background-color 0.3s; /* Voegt een overgang toe voor de hover-effect */
-    
+
 }
 
 .contact-button:hover {
@@ -476,7 +478,7 @@
     align-items: center; /* Centreert de inhoud verticaal */
     margin: 0 auto; /* Centreert het element zelf binnen de parent */
     color: var(--antracite);
-    
+
     margin-right: 110px;
     text-align: center; /* Centreert de tekst binnen het element */
 }
@@ -506,7 +508,7 @@
     cursor: pointer;
     border-radius: 5px; /* Rond de hoeken af */
     transition: background-color 0.3s; /* Voegt een overgang toe voor de hover-effect */
-    
+
 }
 
 
@@ -558,7 +560,7 @@
         margin-left: 30px;
         margin-top: 40px;
     }
-    
+
     .close-sidebar-button{
         display: block;
         background-color: transparent;
@@ -598,7 +600,7 @@
         align-items: center; /* Centreert de inhoud verticaal */
         margin: 0 auto; /* Centreert het element zelf binnen de parent */
         color: var(--antracite);
-        
+
         margin-right: 110px;
         text-align: center; /* Centreert de tekst binnen het element */
     }
@@ -629,7 +631,7 @@
         cursor: pointer;
         border-radius: 5px; /* Rond de hoeken af */
         transition: background-color 0.3s; /* Voegt een overgang toe voor de hover-effect */
-        
+
     }
 
     /* Hover-effect voor de contact knop */
@@ -660,7 +662,7 @@
         overflow-y: auto; /* Voeg scroll toe als de filters te veel worden */
         max-height: 300px;  /* Optioneel: stel een maximale hoogte in voor de container */
     }
-    
+
     .selected-filter {
         margin-bottom: 10px; /* Ruimte tussen de filters */
         margin-top: 10px;    /* Ruimte tussen de filters */
@@ -672,7 +674,7 @@
         border-radius: 4px;
         box-sizing: border-box; /* Zorgt ervoor dat de padding de breedte niet beïnvloedt */
     }
-    
+
 
     .hidden {
         display: none; /* Deze klasse verbergt het element */
@@ -808,7 +810,7 @@ input[type="number"]::-webkit-inner-spin-button {
 
 input[type="number"]::-webkit-outer-spin-button {
     width: 18px;
-    
+
 }
 
 .quantity-container{
@@ -953,7 +955,7 @@ main .pink_button {
     padding: 10px 20px;
     border-radius: 10px;
     cursor: pointer;
-    
+
 }
 
 .dark-blue-button {
@@ -1032,7 +1034,7 @@ main .pink_button {
         position: fixed;
         top: 5%;
         left: 2.5%; /* Start in het midden */
-        
+
         background-color: var(--light_gray);
         width: auto;
         border-radius: 15px;
@@ -1042,11 +1044,11 @@ main .pink_button {
         transition: transform 0.3s ease, opacity 0.3s ease;
         opacity: 1; /* Begin onzichtbaar */
     }
-    
+
     .popup-container.show {
         opacity: 1; /* Maak het zichtbaar */
     }
-    
+
 
     .popup-header p {
         font-size: 14px; /* Kleinere tekst voor mobiel */
@@ -1088,4 +1090,3 @@ main .pink_button {
         font-size: 2rem; /* Kleinere iconen */
     }
 }
-

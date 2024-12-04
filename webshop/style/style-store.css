@@ -65,7 +65,7 @@
 
 
 .button_shop .material-icons-outlined {
-    margin-left: 5px;
+    margin-left: 8px;
 }
 
 .store-content-wrapper {
@@ -619,10 +619,6 @@
         margin-bottom: 400px;
     }
 
-    .button_shop{
-        width: 45%;
-    }
-
     /* Contact knop */
     .contact-button {
         margin: 1vh auto; /* Centreren met auto margin, en vh voor responsiviteit */
@@ -1055,10 +1051,6 @@ main .pink_button {
 
     .popup-header p {
         font-size: 14px; /* Kleinere tekst voor mobiel */
-    }
-
-    .button_shop{
-        width: 45%;
     }
 
     .popup-product img,

@@ -1047,11 +1047,7 @@ main .pink_button {
     .popup-container.show {
         opacity: 1; /* Maak het zichtbaar */
     }
-
-    button_shop {
-      -webkit-appearance: none;
-      appearance: none;
-    }
+    
 
     .popup-header p {
         font-size: 14px; /* Kleinere tekst voor mobiel */
